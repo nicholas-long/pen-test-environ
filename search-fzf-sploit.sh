@@ -4,7 +4,7 @@ choice=$(cat /usr/share/exploitdb/files_exploits.csv | tac | awk -F, '{print $2,
 if [ $? == 0 ]; then
   sel=$(echo $choice | cut -d '#' -f 1 | awk '{print $1}' | sed 's/exploits\///g')
   echo "Mirroring $sel"
-  pane='%0'
+  pane=$(tmux list-panes | grep active | cut -d ']' -f 3 | awk '{print $1}')
   panepath=$(tmux display-message -t "$pane" -a | grep pane_current_path | cut -d '=' -f 2)
   echo $panepath
   cd $panepath
