@@ -24,6 +24,7 @@ RUN touch .hushlogin
 #RUN nvim -c ':execute "normal! :PluginInstall<CR>:q!\<CR>"'
 ADD search-fzf-sploit.sh ./tmux-scripts/search-fzf-sploit.sh
 ADD preview.sh ./tmux-scripts/preview.sh
+ADD parse-searchsploit-csv.sh ./tmux-scripts/parse-searchsploit-csv.sh
 ADD tmux.conf .tmux.conf
 RUN echo "TERM=xterm-256color" >> .bashrc
 
