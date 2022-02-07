@@ -1,15 +1,16 @@
 FROM kalilinux/kali-rolling
 
-WORKDIR /root
-
-
 RUN apt update
 RUN apt install -y git seclists neovim fzf tmux
+RUN apt install -y ltrace
 
-ADD setup-environ.sh .
-RUN /root/setup-environ.sh
+RUN useradd -ms /bin/bash coyote
+USER coyote
+WORKDIR /home/coyote
 
-ADD neovim-bindings.vim /root/.vimrc
+ADD .environ .
 
-ENTRYPOINT [ "tmux" ]
+ADD neovim-bindings.vim /home/coyote/.config/nvim/.vimrc
+
+ENTRYPOINT [ "bash" ]
 

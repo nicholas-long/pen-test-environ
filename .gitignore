@@ -1,1 +1,3 @@
-run-secret.sh
+.environ
+.apitoken
+
