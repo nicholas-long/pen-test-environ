@@ -14,6 +14,7 @@ ADD init.sh .
 ADD neovim-bindings.vim /home/coyote/.config/nvim/init.vim
 RUN git clone https://github.com/VundleVim/Vundle.vim.git /home/coyote/.vim/bundle/Vundle.vim
 RUN git clone https://github.com/nicholas-long/kb
+RUN touch .hustlogin
 #RUN nvim -c ':execute "normal! :PluginInstall<CR>:q!\<CR>"'
 
 
