@@ -21,8 +21,9 @@ RUN git clone https://github.com/VundleVim/Vundle.vim.git /home/coyote/.vim/bund
 RUN git clone https://github.com/nicholas-long/kb
 RUN touch .hushlogin
 #RUN nvim -c ':execute "normal! :PluginInstall<CR>:q!\<CR>"'
-ADD search-fzf-sploit.sh .
-ADD preview.sh .
+ADD search-fzf-sploit.sh ./tmux-scripts/search-fzf-sploit.sh
+ADD preview.sh ./tmux-scripts/preview.sh
+ADD tmux.conf .tmux.conf
 
 
 ENTRYPOINT [ "bash" ]
