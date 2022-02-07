@@ -10,6 +10,7 @@ ADD bat_0.19.0_amd64.deb .
 RUN dpkg -i bat_0.19.0_amd64.deb
 
 RUN useradd -ms /bin/bash coyote
+RUN usermod --shell /bin/bash coyote
 USER coyote
 WORKDIR /home/coyote
 
@@ -24,7 +25,8 @@ RUN touch .hushlogin
 ADD search-fzf-sploit.sh ./tmux-scripts/search-fzf-sploit.sh
 ADD preview.sh ./tmux-scripts/preview.sh
 ADD tmux.conf .tmux.conf
+RUN echo "TERM=xterm-256color" >> .bashrc
 
 
-ENTRYPOINT [ "bash" ]
+ENTRYPOINT [ "tmux", "-u" ]
 
