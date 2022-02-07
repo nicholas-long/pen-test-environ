@@ -2,7 +2,12 @@ FROM kalilinux/kali-rolling
 
 RUN apt update
 RUN apt install -y git seclists neovim fzf tmux
+RUN apt install -y git seclists neovim fzf tmux
 RUN apt install -y ltrace
+RUN apt install -y exploitdb bsdmainutils
+
+ADD bat_0.19.0_amd64.deb .
+RUN dpkg -i bat_0.19.0_amd64.deb
 
 RUN useradd -ms /bin/bash coyote
 USER coyote
@@ -16,6 +21,8 @@ RUN git clone https://github.com/VundleVim/Vundle.vim.git /home/coyote/.vim/bund
 RUN git clone https://github.com/nicholas-long/kb
 RUN touch .hushlogin
 #RUN nvim -c ':execute "normal! :PluginInstall<CR>:q!\<CR>"'
+ADD search-fzf-sploit.sh .
+ADD preview.sh .
 
 
 ENTRYPOINT [ "bash" ]
