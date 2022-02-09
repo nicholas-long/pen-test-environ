@@ -89,3 +89,4 @@ tmap <C-w><Space>g <C-\><C-N>:vert split<Enter> :term<Enter>i
 "nmap <C-w><Space>e yy:term <Enter>
 tmap <C-w>e <C-\><C-N>yy:split<Enter><C-w>j:e cmdscratch<Enter>p
 
+nmap <Space>f :FZF<Enter>
