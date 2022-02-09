@@ -32,6 +32,10 @@ ADD exploit-search-init.sh ./tmux-scripts/exploit-search-init.sh
 ADD tmux.conf .tmux.conf
 RUN echo "TERM=xterm-256color" >> .bashrc
 
+RUN cd tmux-scripts && git clone https://github.com/dylanaraps/fff
+
+ADD recent-files.sh ./tmux-scripts/recent-files.sh
+ADD hotkeys.md ./tmux-scripts/hotkeys.md
 
 ENTRYPOINT [ "tmux", "-u" ]
 
