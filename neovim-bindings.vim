@@ -67,15 +67,26 @@ tmap <C-w>p <C-\><C-N>pi
 
 " exit terminal
 tmap <C-w><C-q> <C-\><C-N>:q!<Enter>
+
+" quit window
 nmap <C-w><C-q> <C-\><C-N>:q!<Enter>
 
 " leave terminal mode and go to normal mode
 tmap ;; <Esc>
 
+" split windows
+nmap <Space>g :vert split<Enter>
+nmap <Space>v :split<Enter>
+
+" move easy
+nmap <Space>j <C-w>j<Enter>
+nmap <Space>k <C-w>k<Enter>
+nmap <Space>l <C-w>l<Enter>
+nmap <Space>h <C-w>h<Enter>
+
 " split terminal from normal mode
 nmap <Space>t :split<Enter> :term<Enter>i
 nmap <Space>tg :vert split<Enter> :term<Enter>i
-nmap <Space>g :vert split<Enter>
 
 " split new terminals
 tmap <C-w><Space>t <C-\><C-N>:split<Enter> :term<Enter>i
