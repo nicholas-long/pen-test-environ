@@ -24,18 +24,12 @@ RUN mkdir -p ./tmux-scripts/github-exploit-code-repository-index
 RUN git clone https://github.com/nicholas-long/github-exploit-code-repository-index ./tmux-scripts/github-exploit-code-repository-index
 RUN touch .hushlogin
 #RUN nvim -c ':execute "normal! :PluginInstall<CR>:q!\<CR>"'
-ADD search-fzf-sploit.sh ./tmux-scripts/search-fzf-sploit.sh
-ADD preview.sh ./tmux-scripts/preview.sh
-ADD parse-searchsploit-csv.sh ./tmux-scripts/parse-searchsploit-csv.sh
-ADD run-github-exploit-index.sh ./tmux-scripts/run-github-exploit-index.sh
-ADD exploit-search-init.sh ./tmux-scripts/exploit-search-init.sh
+
 ADD tmux.conf .tmux.conf
 RUN echo "TERM=xterm-256color" >> .bashrc
 
+ADD tmux-scripts/ tmux-scripts/
 RUN cd tmux-scripts && git clone https://github.com/dylanaraps/fff
-
-ADD recent-files.sh ./tmux-scripts/recent-files.sh
-ADD hotkeys.md ./tmux-scripts/hotkeys.md
 
 ENTRYPOINT [ "tmux", "-u" ]
 
