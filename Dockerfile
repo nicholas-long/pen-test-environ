@@ -1,13 +1,11 @@
 FROM kalilinux/kali-rolling
 
 RUN apt update
-RUN apt install -y git seclists neovim fzf tmux
-RUN apt install -y git seclists neovim fzf tmux
-RUN apt install -y ltrace
-RUN apt install -y exploitdb bsdmainutils
+RUN apt install -y git seclists neovim fzf tmux git seclists neovim fzf tmux ltrace exploitdb bsdmainutils wget
 
 ADD bat_0.19.0_amd64.deb .
 RUN dpkg -i bat_0.19.0_amd64.deb
+RUN cd /usr/bin && wget https://github.com/akavel/up/releases/download/v0.4/up && chmod +x /usr/bin/up
 
 RUN useradd -ms /bin/bash coyote
 RUN usermod --shell /bin/bash coyote

@@ -5,7 +5,9 @@ if [ $? != 0 ]; then
   exit 1
 fi
 
-cd tmux-scripts && git clone https://github.com/dylanaraps/fff && git clone https://github.com/nicholas-long/github-exploit-code-repository-index
+cd tmux-scripts \
+  && git clone https://github.com/dylanaraps/fff \
+  && git clone https://github.com/nicholas-long/github-exploit-code-repository-index
 cd -
 
 docker build . -t environ
