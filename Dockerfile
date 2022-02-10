@@ -1,7 +1,7 @@
 FROM kalilinux/kali-rolling
 
 RUN apt update
-RUN apt install -y git seclists neovim fzf tmux git seclists neovim fzf tmux ltrace exploitdb bsdmainutils wget
+RUN apt install -y git seclists neovim fzf tmux git seclists neovim fzf tmux ltrace exploitdb bsdmainutils wget python3-pip
 
 ADD bat_0.19.0_amd64.deb .
 RUN dpkg -i bat_0.19.0_amd64.deb
@@ -9,6 +9,7 @@ RUN cd /usr/bin && wget https://github.com/akavel/up/releases/download/v0.4/up &
 
 RUN useradd -ms /bin/bash coyote
 RUN usermod --shell /bin/bash coyote
+
 USER coyote
 WORKDIR /home/coyote
 
@@ -26,7 +27,9 @@ RUN git clone https://github.com/carlospolop/hacktricks
 ADD tmux.conf .tmux.conf
 RUN echo "TERM=xterm-256color" >> .bashrc
 
-ADD tmux-scripts/ tmux-scripts/
+ADD tmux-scripts tmux-scripts
+RUN cd tmux-scripts && git clone https://github.com/nicholas-long/tmux-pwn-menu || ls -al tmux-pwn-menu
+RUN python3 -m pip install -r $HOME/tmux-scripts/tmux-pwn-menu/requirements.txt
 
 ENTRYPOINT [ "tmux", "-u" ]
 

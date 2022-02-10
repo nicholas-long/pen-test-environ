@@ -7,6 +7,8 @@ set noerrorbells
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+set path=.,,**
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -78,11 +80,11 @@ tmap ;; <Esc>
 nmap <Space>g :vert split<Enter>
 nmap <Space>v :split<Enter>
 
-" move easy
-nmap <Space>j <C-w>j<Enter>
-nmap <Space>k <C-w>k<Enter>
-nmap <Space>l <C-w>l<Enter>
-nmap <Space>h <C-w>h<Enter>
+" move easy - i didn't know vim already has this wtih C-[hjkl]
+" nmap <Space>j <C-w>j<Enter>
+" nmap <Space>k <C-w>k<Enter>
+" nmap <Space>l <C-w>l<Enter>
+" nmap <Space>h <C-w>h<Enter>
 
 " split terminal from normal mode
 nmap <Space>t :split<Enter> :term<Enter>i

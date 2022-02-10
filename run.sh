@@ -5,9 +5,10 @@ if [ $? != 0 ]; then
   exit 1
 fi
 
-cd tmux-scripts \
-  && git clone https://github.com/dylanaraps/fff \
-  && git clone https://github.com/nicholas-long/github-exploit-code-repository-index
+cd tmux-scripts
+git clone https://github.com/dylanaraps/fff
+git clone https://github.com/nicholas-long/github-exploit-code-repository-index
+git clone https://github.com/nicholas-long/tmux-pwn-menu
 cd -
 
 docker build . -t environ
@@ -22,3 +23,6 @@ docker run --rm -it \
   -v "$(pwd)/tmux-scripts:/home/coyote/tmux-scripts" \
   -e "TERM=xterm-256color" \
   environ
+
+docker system prune -a -f
+
