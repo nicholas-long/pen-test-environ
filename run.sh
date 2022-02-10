@@ -19,5 +19,6 @@ docker run --rm -it \
   -v "$HOME/.git-credentials:/home/coyote/.git-credentials:ro" \
   -v "$HOME/.gitconfig:/home/coyote/.gitconfig" \
   -v "$(pwd):/home/coyote/environ" \
+  -v "$(pwd)/tmux-scripts:/home/coyote/tmux-scripts" \
   -e "TERM=xterm-256color" \
   environ
