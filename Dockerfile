@@ -21,6 +21,8 @@ RUN git clone https://github.com/nicholas-long/kb
 RUN touch .hushlogin
 RUN nvim -c ':PluginInstall' -c ':q' -c ':q'
 
+RUN git clone https://github.com/carlospolop/hacktricks
+
 ADD tmux.conf .tmux.conf
 RUN echo "TERM=xterm-256color" >> .bashrc
 
