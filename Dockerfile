@@ -30,6 +30,7 @@ RUN echo "TERM=xterm-256color" >> .bashrc
 ADD tmux-scripts tmux-scripts
 RUN cd tmux-scripts && git clone https://github.com/nicholas-long/tmux-pwn-menu || ls -al tmux-pwn-menu
 RUN python3 -m pip install -r $HOME/tmux-scripts/tmux-pwn-menu/requirements.txt
+#ADD lazygit_0.32.2_Linux_x86_64.tar.gz tmux-scripts/
 
 ENTRYPOINT [ "tmux", "-u" ]
 

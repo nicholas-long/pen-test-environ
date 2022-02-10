@@ -24,5 +24,5 @@ docker run --rm -it \
   -e "TERM=xterm-256color" \
   environ
 
-docker system prune -a -f
+#docker system prune -a -f
 
