@@ -27,6 +27,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
+Plugin 'azabiong/vim-highlighter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

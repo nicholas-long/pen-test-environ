@@ -15,6 +15,10 @@
 * `ctrl l`     : movement keys 
 * `ctrl .`     : example 
 
+# vim highlighter
+`f Enter` set highlight ( word, selection )
+`f Backspace` clear highlight ( word, selection )
+
 # [M] fff hotkeys
 ```
 j: scroll down
