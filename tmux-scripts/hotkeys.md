@@ -1,5 +1,6 @@
 # hotkeys
 * `ctrl space` : quick menu 
+* `ctrl b`     : edit tmux buffer ( nvim )
 * `ctrl e`     : search for exploits 
 * `ctrl f`     : fuzzy find fzf 
 * `ctrl i`     : find snippets from markdown repositories 
