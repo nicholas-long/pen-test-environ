@@ -1,7 +1,11 @@
 FROM kalilinux/kali-rolling
 
+WORKDIR /root
+
 RUN apt update
-RUN apt install -y git seclists neovim fzf tmux git seclists neovim fzf tmux ltrace exploitdb bsdmainutils wget python3-pip
+ADD stuff-that-docker-needs.sh .
+RUN ./stuff-that-docker-needs.sh
+RUN apt install -y seclists neovim fzf tmux bsdmainutils 
 
 ADD bat_0.19.0_amd64.deb .
 RUN dpkg -i bat_0.19.0_amd64.deb
