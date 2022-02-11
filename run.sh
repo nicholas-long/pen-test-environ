@@ -21,6 +21,7 @@ docker run --rm -it \
   -v "$HOME/.gitconfig:/home/coyote/.gitconfig" \
   -v "$(pwd):/home/coyote/environ" \
   -v "$(pwd)/tmux-scripts:/home/coyote/tmux-scripts" \
+  -v "$(pwd)/tmux.conf:/home/coyote/.tmux.conf" \
   -e "TERM=xterm-256color" \
   environ
 
