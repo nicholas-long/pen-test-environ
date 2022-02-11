@@ -1,19 +1,18 @@
-|hotkey|notes|
-|---|---|
-| `ctrl` `space` | quick menu |
-| `ctrl` `e` | search for exploits |
-| `ctrl` `f` | fuzzy find fzf |
-| `ctrl` `i` | find snippets from markdown repositories |
-| `ctrl` `m` | this help message |
-| `ctrl` `q` | manage files (copy, move) with fff |
-| `ctrl` `r` | manage git repository with lazygit |
-| `ctrl` `v` | fuzzy find file; edit in neovim |
-| `ctrl` `x` | fuzzy find file on whole machine; edit in neovim |
-| `ctrl` `h` | movement keys |
-| `ctrl` `j` | movement keys |
-| `ctrl` `k` | movement keys |
-| `ctrl` `l` | movement keys |
-| `ctrl` `.` | example |
+# hotkeys
+* `ctrl space` : quick menu 
+* `ctrl e`     : search for exploits 
+* `ctrl f`     : fuzzy find fzf 
+* `ctrl i`     : find snippets from markdown repositories 
+* `ctrl m`     : this help message 
+* `ctrl q`     : manage files (copy, move) with fff 
+* `ctrl r`     : manage git repository with lazygit 
+* `ctrl v`     : fuzzy find file; edit in neovim 
+* `ctrl x`     : fuzzy find file on whole machine; edit in neovim 
+* `ctrl h`     : movement keys 
+* `ctrl j`     : movement keys 
+* `ctrl k`     : movement keys 
+* `ctrl l`     : movement keys 
+* `ctrl .`     : example 
 
 # [M] fff hotkeys
 ```
