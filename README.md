@@ -13,13 +13,17 @@ pentesting environment
 
 # build and run
 
+Test it in a docker.
 Mounts your user git credentials into the docker for convenience.
+
 
 ```
 ./run.sh
 ```
 
 # install in host
+
+Not perfectly implemented yet. If something breaks, just look at the dockerfile for advice.
 
 ```
 ./install.sh
