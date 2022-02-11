@@ -22,6 +22,7 @@ docker run --rm -it \
   -v "$(pwd):/home/coyote/environ" \
   -v "$(pwd)/tmux-scripts:/home/coyote/tmux-scripts" \
   -v "$(pwd)/tmux.conf:/home/coyote/.tmux.conf" \
+  -v "$HOME/kb:/home/coyote/kb" \
   -e "TERM=xterm-256color" \
   environ
 
