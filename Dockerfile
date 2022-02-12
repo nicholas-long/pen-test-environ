@@ -17,7 +17,6 @@ RUN usermod --shell /bin/bash coyote
 USER coyote
 WORKDIR /home/coyote
 
-ADD .environ .
 ADD init.sh .
 
 ADD neovim-bindings.vim /home/coyote/.config/nvim/init.vim
