@@ -105,3 +105,6 @@ tmap <C-w><Space>g <C-\><C-N>:vert split<Enter> :term<Enter>i
 tmap <C-w>e <C-\><C-N>yy:split<Enter><C-w>j:e cmdscratch<Enter>p
 
 nmap <Space>f :FZF<Enter>
+
+" paste tmux buffer
+nmap <Space>p :r! tmux saveb -<Enter>
