@@ -6,6 +6,9 @@ RUN apt update
 ADD stuff-that-docker-needs.sh .
 RUN ./stuff-that-docker-needs.sh
 RUN apt install -y seclists neovim fzf tmux bsdmainutils 
+RUN apt install -y figlet
+RUN mkdir -p /usr/share/figlet && cd /usr/share/figlet && git clone https://github.com/xero/figlet-fonts && mv figlet-fonts/* .
+
 
 ADD bat_0.19.0_amd64.deb .
 RUN dpkg -i bat_0.19.0_amd64.deb
