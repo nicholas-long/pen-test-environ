@@ -1,9 +1,9 @@
 #!/bin/bash
 
 git pull
-if [ $? != 0 ]; then
-  exit 1
-fi
+#if [ $? != 0 ]; then
+#  exit 1
+#fi
 
 cd tmux-scripts
 git clone https://github.com/dylanaraps/fff
@@ -16,7 +16,7 @@ if [ $? != 0 ]; then
   exit 1
 fi
 
-docker run --rm -it \
+docker run -it \
   -v "$HOME/.git-credentials:/home/coyote/.git-credentials:ro" \
   -v "$HOME/.gitconfig:/home/coyote/.gitconfig" \
   -v "$(pwd):/home/coyote/environ" \
