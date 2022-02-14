@@ -13,3 +13,14 @@
 
 # shell scripts, aliases, functions
 
+# issues
+- too hard to copy. 
+  - add tmux buffer edit functionality
+- still need payloads
+  - shell scripts in bashrc
+- disable mouse in vim?
+- tmux disable right click or set right click to paste
+  - can use the menu for something?
+- too hard to open tmux pwn menu
+  - need it all the time
+  - 
