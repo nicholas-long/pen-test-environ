@@ -1,8 +1,11 @@
-# things to add
-
-- GTFObins
+# things to fix
+- install script
+  - add lolcat
+  - add figlet
+    - and fonts? need sudo
 
 # hotkeys and features to add
+- GTFObins
 - to try list: like a todo list for exploits. maybe just a vim scratchpad? 
   - maybe fine with vim paragraph sorting
 - md plugin to hilight lines, or a system in md to indicate something is important
