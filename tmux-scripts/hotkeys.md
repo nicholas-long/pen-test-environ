@@ -4,7 +4,7 @@
 * `ctrl c`     : copy tmux buffer to host clipboard ( xclip )
 * `ctrl y`     : copy host clipboard to tmux buffer ( xclip )
 * `ctrl e`     : search for exploits 
-* `ctrl f`     : fuzzy find fzf 
+* `ctrl z`     : fuzzy find file fzf -> tmux buffer
 * `ctrl i`     : find snippets from markdown repositories 
 * `ctrl m`     : this help message 
 * `ctrl q`     : manage files (copy, move) with fff 
