@@ -1,6 +1,8 @@
 # hotkeys
 * `ctrl space` : quick menu 
 * `ctrl b`     : edit tmux buffer ( nvim )
+* `ctrl c`     : copy tmux buffer to host clipboard ( xclip )
+* `ctrl y`     : copy host clipboard to tmux buffer ( xclip )
 * `ctrl e`     : search for exploits 
 * `ctrl f`     : fuzzy find fzf 
 * `ctrl i`     : find snippets from markdown repositories 
