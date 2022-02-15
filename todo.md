@@ -6,6 +6,7 @@
 
 # hotkeys and features to add
 - GTFObins
+- payloadsallthethings
 - to try list: like a todo list for exploits. maybe just a vim scratchpad? 
   - maybe fine with vim paragraph sorting
 
