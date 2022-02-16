@@ -124,5 +124,5 @@ alias q=exit
 alias v='nvim $(fzf)'
 alias http='python3 -m http.server'
 alias t='tmux a -t $(tmux ls | fzf| cut -d ":" -f 1) || tmux'
-
+alias k='~/tmux-scripts/kb.sh'
 
