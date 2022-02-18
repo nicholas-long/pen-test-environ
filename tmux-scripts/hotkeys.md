@@ -8,7 +8,8 @@
 * `ctrl i`     : find snippets from markdown repositories 
 * `ctrl m`     : this help message 
 * `ctrl q`     : manage files (copy, move) with fff 
-* `ctrl r`     : manage git repository with lazygit 
+* `ctrl r`     : edit tmux conf
+* `r`          : source tmux conf
 * `ctrl v`     : fuzzy find file; edit in neovim 
 * `ctrl x`     : fuzzy find file on whole machine; edit in neovim 
 * `ctrl h`     : movement keys 
