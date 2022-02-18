@@ -22,7 +22,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 "Plugin 'valloric/youcompleteme' " requires vim with python support
-Plugin 'christoomey/vim-tmux-navigator'
+"Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
@@ -82,11 +82,11 @@ tmap ;; <Esc>
 nmap <Space>g :vert split<Enter>
 nmap <Space>v :split<Enter>
 
-" move easy - i didn't know vim already has this wtih C-[hjkl]
-" nmap <Space>j <C-w>j<Enter>
-" nmap <Space>k <C-w>k<Enter>
-" nmap <Space>l <C-w>l<Enter>
-" nmap <Space>h <C-w>h<Enter>
+" move easy
+nmap <Space>j <C-w>j
+nmap <Space>k <C-w>k
+nmap <Space>l <C-w>l
+nmap <Space>h <C-w>h
 
 " split terminal from normal mode
 nmap <Space>t :split<Enter> :term<Enter>i
