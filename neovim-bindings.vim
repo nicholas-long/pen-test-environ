@@ -109,6 +109,9 @@ nmap <Space>f :FZF<Enter>
 " paste tmux buffer
 nmap <Space>p :r! tmux saveb -<Enter>
 
+" copy to tmux buffer
+vmap <Space>c :w! /tmp/tmuxbuf <Enter>:r! tmux loadb /tmp/tmuxbuf<Enter>
+
 " look up highlighted thing in searchsploit and paste down
 vmap <Space>l y:r! ~/tmux-scripts/searchsploit-plain-text.sh <C-r>"<Enter>
 
