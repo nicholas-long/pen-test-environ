@@ -5,6 +5,8 @@
 - payloadsallthethings
 
 # shell scripts, aliases, functions
+- common
+  - gobuster vhost
 
 # issues
 - speed up tmux pwn menu - fzf?
