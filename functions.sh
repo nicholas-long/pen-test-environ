@@ -118,6 +118,14 @@ function breakout {
   revshell
 }
 
+# select ubuntu version, build docker in the current directory with gcc installed
+function dbuild_ubuntu {
+  tag=$(~/kb/docker/get-tags.sh ubuntu | fzf --prompt="select tag")
+  ~/kb/docker/templates/ubuntu-dockerfile-template.sh $tag > Dockerfile 
+  docker build . -t test
+  docker run -it -v "$(pwd):$(pwd)" -w "$(pwd)" test
+}
+
 alias g=lazygit
 alias f=fff
 alias q=exit
