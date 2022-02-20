@@ -111,6 +111,7 @@ stty raw -echo; fg
 EOF
   stty size | awk '{print "stty rows",$1,"cols", $2}'
   echo "export TERM=xterm-256color"
+  echo "export PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin"
 }
 
 function breakout {
