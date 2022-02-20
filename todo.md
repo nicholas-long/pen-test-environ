@@ -9,6 +9,7 @@
   - gobuster vhost
 
 # issues / todo
+- get passwd line pregenerated -> breakout or common
 - common commands
   - fix up format
   - change it to be my commnads
