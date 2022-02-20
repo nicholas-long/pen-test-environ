@@ -80,7 +80,10 @@ tmap ;; <Esc>
 
 " split windows
 nmap <Space>g :vert split<Enter>
-nmap <Space>v :split<Enter>
+
+" trying out v and s for split keys
+"nmap <Space>v :split<Enter>
+nmap <Space>s :split<Enter>
 
 " move easy
 nmap <Space>j <C-w>j
