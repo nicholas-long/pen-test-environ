@@ -1,22 +1,23 @@
 # hotkeys
-* `ctrl space` : quick menu 
-* `ctrl b`     : edit tmux buffer ( nvim )
-* `ctrl c`     : copy tmux buffer to host clipboard ( xclip )
-* `ctrl y`     : copy host clipboard to tmux buffer ( xclip )
-* `ctrl e`     : search for exploits 
-* `ctrl z`     : fuzzy find file fzf -> tmux buffer
-* `ctrl i`     : find snippets from markdown repositories 
-* `ctrl m`     : this help message 
-* `ctrl q`     : manage files (copy, move) with fff 
-* `ctrl r`     : edit tmux conf
-* `r`          : source tmux conf
-* `ctrl v`     : fuzzy find file; edit in neovim 
-* `ctrl x`     : fuzzy find file on whole machine; edit in neovim 
-* `ctrl h`     : movement keys 
-* `ctrl j`     : movement keys 
-* `ctrl k`     : movement keys 
-* `ctrl l`     : movement keys 
-* `ctrl .`     : example 
+* `ctrl space`           : default prefix key
+* Prefix + `ctrl space`  : quick menu 
+* Prefix + `ctrl b`      : edit tmux buffer ( nvim )
+* Prefix + `ctrl c`      : copy tmux buffer to host clipboard ( xclip )
+* Prefix + `ctrl y`      : copy host clipboard to tmux buffer ( xclip )
+* Prefix + `ctrl e`      : search for exploits 
+* Prefix + `ctrl z`      : fuzzy find file fzf -> tmux buffer
+* Prefix + `ctrl i`      : Revershe shell IP menu
+* Prefix + `ctrl o`      : find snippets from markdown repositories 
+* Prefix + `ctrl m`      : this help message 
+* Prefix + `ctrl q`      : manage files (copy, move) with fff 
+* Prefix + `ctrl r`      : edit tmux conf
+* Prefix + `r`           : source tmux conf
+* Prefix + `ctrl v`      : fuzzy find file; edit in neovim 
+* Prefix + `ctrl x`      : fuzzy find file on whole machine; edit in neovim 
+* `ctrl h`               : movement keys 
+* `ctrl j`               : movement keys 
+* `ctrl k`               : movement keys 
+* `ctrl l`               : movement keys 
 
 # vim highlighter
 `f Enter` set highlight ( word, selection )
