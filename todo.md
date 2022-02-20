@@ -7,6 +7,8 @@
 # shell scripts, aliases, functions
 
 # issues
+- speed up tmux pwn menu - fzf?
+- fix apache start/stop in quick menu
 
 ## issues fixed
 - to try list: like a todo list for exploits. maybe just a vim scratchpad? 
