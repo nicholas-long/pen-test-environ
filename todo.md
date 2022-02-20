@@ -8,12 +8,13 @@
 - common
   - gobuster vhost
 
-# issues
+# issues / todo
 - common commands
   - fix up format
   - change it to be my commnads
 - speed up tmux pwn menu - fzf?
 - fix apache start/stop in quick menu
+- pregenerate lxc priv esc image in kb?
 
 ## issues fixed
 - to try list: like a todo list for exploits. maybe just a vim scratchpad? 
