@@ -118,3 +118,10 @@ vmap <Space>c :w! /tmp/tmuxbuf <Enter>:r! tmux loadb /tmp/tmuxbuf<Enter>
 " look up highlighted thing in searchsploit and paste down
 vmap <Space>l y:r! ~/tmux-scripts/searchsploit-plain-text.sh <C-r>"<Enter>
 
+" space q to quit gently, C-w C-q to force
+nmap <Space>q :q<Enter>
+nmap <C-s> :w<Enter>
+
+# space w to write
+nmap <Space>w :w<Enter>
+
