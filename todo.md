@@ -6,20 +6,19 @@
   - lolcat
   - figlet fonts
 
-# hotkeys and features to add
-- GTFObins
-- payloadsallthethings
-
 # shell scripts, aliases, functions
 - common
   - gobuster vhost
 
-# issues / todo
+# issues / todo / features
+- apt fuzzy search install
 - get passwd line pregenerated -> breakout or common
 - get mimikatz and win enum scripts builds ready to go
 - common commands
   - fix up format
   - change it to be my commnads
+- GTFObins
+- payloadsallthethings
 - speed up tmux pwn menu - fzf?
 - fix apache start/stop in quick menu
 - pregenerate lxc priv esc image in kb?
