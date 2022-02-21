@@ -122,6 +122,6 @@ vmap <Space>l y:r! ~/tmux-scripts/searchsploit-plain-text.sh <C-r>"<Enter>
 nmap <Space>q :q<Enter>
 nmap <C-s> :w<Enter>
 
-# space w to write
+" space w to write
 nmap <Space>w :w<Enter>
 
