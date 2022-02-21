@@ -1,5 +1,11 @@
 # things to fix
 
+# problems installing environment
+- script install
+  - vundle
+  - lolcat
+  - figlet fonts
+
 # hotkeys and features to add
 - GTFObins
 - payloadsallthethings
