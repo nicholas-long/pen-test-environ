@@ -16,6 +16,7 @@
 
 # issues / todo
 - get passwd line pregenerated -> breakout or common
+- get mimikatz and win enum scripts builds ready to go
 - common commands
   - fix up format
   - change it to be my commnads
