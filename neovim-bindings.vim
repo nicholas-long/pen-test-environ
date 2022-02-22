@@ -125,3 +125,8 @@ nmap <C-s> :w<Enter>
 " space w to write
 nmap <Space>w :w<Enter>
 
+" abbreviations
+abbr _sh #!/bin/bash
+abbr _awk awk '{print $1}'
+
+nmap <Space>kb :r ~/kb/
