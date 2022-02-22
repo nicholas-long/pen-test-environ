@@ -11,7 +11,6 @@
   - gobuster vhost
 
 # issues / todo / features
-- apt fuzzy search install
 - get passwd line pregenerated -> breakout or common
 - get mimikatz and win enum scripts builds ready to go
 - common commands
