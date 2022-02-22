@@ -1,6 +1,7 @@
 # hotkeys
 * `ctrl space`           : default prefix key
 * Prefix + `ctrl space`  : quick menu 
+* Prefix + `ctrl a`      : fuzzy find and install apt packages
 * Prefix + `ctrl b`      : edit tmux buffer ( nvim )
 * Prefix + `ctrl c`      : copy tmux buffer to host clipboard ( xclip )
 * Prefix + `ctrl y`      : copy host clipboard to tmux buffer ( xclip )
