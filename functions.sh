@@ -130,8 +130,14 @@ function build_it_in_ubuntu_docker {
   docker run -it -v "$(pwd):$(pwd)" -w "$(pwd)" test
 }
 
+# Add this to your .bashrc, .zshrc or equivalent.
+# Run 'fff' with 'f' or whatever you decide to name the function.
+f() {
+    fff "$@"
+    cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
+}
+
 alias g=lazygit
-alias f=fff
 alias q=exit
 alias v='nvim $(fzf)'
 alias http='python3 -m http.server'
