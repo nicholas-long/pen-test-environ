@@ -146,3 +146,5 @@ alias k='~/tmux-scripts/kb.sh no'
 alias common='bat --style=plain --paging=never ~/kb/hacking/common-commands.md'
 alias ttl='~/tmux-scripts/markdown-vivid.sh ~/kb/hacking/to-try-list.md'
 alias a='sudo apt install -y $(apt list 2>/dev/null | fzf | cut -d '/' -f 1)'
+
+export PATH=$PATH:/usr/share/hashcat-utils
