@@ -133,7 +133,7 @@ function build_it_in_ubuntu_docker {
 # Add this to your .bashrc, .zshrc or equivalent.
 # Run 'fff' with 'f' or whatever you decide to name the function.
 f() {
-    fff "$@"
+    EDITOR=nvim fff "$@"
     cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
 }
 
