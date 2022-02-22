@@ -128,5 +128,6 @@ nmap <Space>w :w<Enter>
 " abbreviations
 abbr _sh #!/bin/bash
 abbr _awk awk '{print $1}'
+abbr _dn /dev/null
 
 nmap <Space>kb :r ~/kb/
