@@ -11,6 +11,7 @@
   - gobuster vhost
 
 # issues / todo / features
+- get all impacket commands from to try list into kb
 - get passwd line pregenerated -> breakout or common
 - get mimikatz and win enum scripts builds ready to go
 - common commands
