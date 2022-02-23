@@ -26,6 +26,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'morhetz/gruvbox'
 Plugin 'scrooloose/nerdtree'
 Plugin 'azabiong/vim-highlighter'
 
@@ -38,7 +39,8 @@ set list listchars=tab:▸\ ,eol:¬,trail:·
 set list
 let g:solarized_termcolors=256
 set background=dark
-colorscheme solarized
+"colorscheme solarized
+colorscheme gruvbox
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " hacks
