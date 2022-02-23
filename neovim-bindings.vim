@@ -109,7 +109,14 @@ tmap <C-w><Space>g <C-\><C-N>:vert split<Enter> :term<Enter>i
 "nmap <C-w><Space>e yy:term <Enter>
 tmap <C-w>e <C-\><C-N>yy:split<Enter><C-w>j:e cmdscratch<Enter>p
 
-nmap <Space>f :FZF<Enter>
+" This is the default option:
+"   - Preview window on the right with 50% width
+"   - CTRL-/ will toggle preview window.
+" - Note that this array is passed as arguments to fzf#vim#with_preview function.
+" - To learn more about preview window options, see `--preview-window` section of `man fzf`.
+let g:fzf_preview_window = ['right:50%', 'ctrl-/']
+
+nmap <Space>f :Files<Enter>
 
 " paste tmux buffer
 nmap <Space>p :r! tmux saveb -<Enter>
