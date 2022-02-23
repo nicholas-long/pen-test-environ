@@ -13,13 +13,16 @@
 # issues / todo / features
 - get all impacket commands from to try list into kb
 - get passwd line pregenerated -> breakout or common
-- get mimikatz and win enum scripts builds ready to go
+- priv esc lists
+  - linux
+  - windows
 - common commands
   - fix up format
   - change it to be my commnads
 - GTFObins
 - payloadsallthethings
 - speed up tmux pwn menu - fzf?
+- get mimikatz and win enum scripts builds ready to go
 - fix apache start/stop in quick menu
 - pregenerate lxc priv esc image in kb?
 
