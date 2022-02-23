@@ -11,7 +11,6 @@
   - gobuster vhost
 
 # issues / todo / features
-- fix tmux scrolling on copy with mouse or kayboard sometimes
 - get all impacket commands from to try list into kb
 - get passwd line pregenerated -> breakout or common
 - priv esc lists
