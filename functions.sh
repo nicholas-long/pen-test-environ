@@ -152,3 +152,6 @@ alias a='sudo apt install -y $(apt list 2>/dev/null | fzf | cut -d '/' -f 1)'
 alias bc='sudo bettercap -autostart events.stream,net.recon,net.sniff,net.probe,arp.spoof,any.proxy'
 
 export PATH=$PATH:/usr/share/hashcat-utils
+
+# turn bash prompt into vi edit with Esc
+set -o vi
