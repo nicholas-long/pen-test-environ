@@ -2,6 +2,7 @@
 
 cp tmux.conf ~/.tmux.conf
 cp neovim-bindings.vim ~/.config/nvim/init.vim
+sudo apt install fonts-powerline
 
 mkdir -p ~/tmux-scripts
 cp -r tmux-scripts/* ~/tmux-scripts/ 2>/dev/null
