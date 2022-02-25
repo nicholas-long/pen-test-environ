@@ -1,22 +1,19 @@
 # things to fix
 
 # problems installing environment
+- install fzf
 - script install
   - vundle
   - lolcat
   - figlet fonts
 
-# shell scripts, aliases, functions
-- common
-  - gobuster vhost
-
 # issues / todo / features
 - get all impacket commands from to try list into kb
-- get passwd line pregenerated -> breakout or common
 - priv esc lists
   - linux
   - windows
 - common commands
+  - gobuster vhost
   - fix up format
   - change it to be my commnads
 - GTFObins
