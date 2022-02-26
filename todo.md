@@ -8,6 +8,7 @@
   - figlet fonts
 
 # issues / todo / features
+- fix `kb_locations.lst`
 - get all impacket commands from to try list into kb
 - priv esc lists
   - linux
