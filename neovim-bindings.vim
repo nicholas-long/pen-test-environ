@@ -141,3 +141,9 @@ abbr _awk awk '{print $1}'
 abbr _dn /dev/null
 
 nmap <Space>kb :r ~/kb/
+
+" add comma from normal mode
+nmap <Space>, Ea,<Esc>
+" surround rest of line in backtick quotes
+nmap <Space>` ebi`<Esc>A`<Esc>
+nmap <Space>( ebi(<Esc>A)<Esc>
