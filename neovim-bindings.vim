@@ -66,8 +66,8 @@ tmap <C-w>k <Esc><C-w>k
 tmap <C-w>l <Esc><C-w>l
 tmap <C-w>h <Esc><C-w>h
 
-" exit insert mode with jj
-imap jj <Esc>
+" exit insert mode with jk
+imap jk <Esc>
 
 " ctrl w p to paste in terminal
 tmap <C-w>p <C-\><C-N>pi
