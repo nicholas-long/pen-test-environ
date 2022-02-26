@@ -8,15 +8,21 @@ PAGING="no"
 VERBOSE=0
 while [[ $# -gt 0 ]]; do
   case $1 in
+    -q|--query)
+      shift # pop arg
+      QUERY="$1"
+      ;;
     -p|--paging)
       PAGING=1
       ;;
     -v|--verbose)
       VERBOSE=1
       ;;
-    -q|--query)
-      shift # pop arg
-      QUERY="$1"
+    -h|--help)
+      echo "Usage: $0 -q \"(grep pattern)\" [ options ] kb_directory"
+      echo "Options:"
+      cat "$0" | grep '^\s\+-.|--.*'
+      exit 1
       ;;
     *)
       KB_DIR="$1"
