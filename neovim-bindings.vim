@@ -55,7 +55,7 @@ set noerrorbells
 set nowrap
 
 " source the file
-nmap <Space>gs :source example-vimrc-bindings.vim <Enter>
+nmap <Space>gs :source ~/.config/nvim/init.vim <Enter>
 
 " terminal normal mode escape for neovim
 tmap <Esc> <C-\><C-N>
@@ -150,3 +150,7 @@ nmap <Space>" ebi"<Esc>A"<Esc>
 nmap <Space>' ebi'<Esc>A'<Esc>
 nmap <Space>( ebi(<Esc>A)<Esc>%
 nmap <Space>< ebi<<Esc>ea><Esc>
+
+" spacing lines
+nmap <Space><Space>j o<Esc>
+nmap <Space><Space>k O<Esc>
