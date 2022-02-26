@@ -10,13 +10,11 @@
 # issues / todo / features
 - fix `kb_locations.lst`
 - get all impacket commands from to try list into kb
-- priv esc lists
-  - linux
-  - windows
+- take install steps and put into easy to run script
 - common commands
   - gobuster vhost
   - fix up format
-  - change it to be my commnads
+  - change it to be my commands
 - GTFObins
 - payloadsallthethings
 - speed up tmux pwn menu - fzf?
@@ -27,6 +25,9 @@
 ## issues fixed
 - to try list: like a todo list for exploits. maybe just a vim scratchpad? 
   - maybe fine with vim paragraph sorting
+- priv esc lists
+  - linux
+  - windows
 - disable mouse in vim? - no, fix copy paste everywhere
 - tmux disable right click or set right click to paste
   - can use the menu for something?
