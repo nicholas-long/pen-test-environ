@@ -52,6 +52,7 @@ colorscheme gruvbox
 set number
 set relativenumber
 set noerrorbells
+set nowrap
 
 " source the file
 nmap <Space>gs :source example-vimrc-bindings.vim <Enter>
