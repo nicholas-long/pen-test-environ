@@ -41,6 +41,15 @@ if [ $VERBOSE -ne 0 ]; then
   echo "Paging: $PAGING"
 fi
 
+# determine from tty size if we should preview vertically or horizontally
+rows=$(stty size | awk '{print $1}')
+cols=$(stty size | awk '{print $2}')
+export WINDOWLOC=up
+halfcols=$(( $cols / 2 ))
+if (($rows < $halfcols)); then
+  export WINDOWLOC=right
+fi
+
 getbyname () {
   read line file
   if [ $PAGING == "no" ]; then
