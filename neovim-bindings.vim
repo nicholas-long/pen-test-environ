@@ -144,6 +144,9 @@ nmap <Space>kb :r ~/kb/
 
 " add comma from normal mode
 nmap <Space>, Ea,<Esc>
-" surround rest of line in backtick quotes
+" surround rest of line "with quotes or parens"
 nmap <Space>` ebi`<Esc>A`<Esc>
-nmap <Space>( ebi(<Esc>A)<Esc>
+nmap <Space>" ebi"<Esc>A"<Esc>
+nmap <Space>' ebi'<Esc>A'<Esc>
+nmap <Space>( ebi(<Esc>A)<Esc>%
+nmap <Space>< ebi<<Esc>ea><Esc>
