@@ -11,16 +11,31 @@ if (($rows < $halfcols)); then
   export WINDOWLOC=right
 fi
 
-paging=$1
+PAGING="no"
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -p|--paging)
+      PAGING=1
+      ;;
+    *)
+      KB_DIR="$1"
+      ;;
+  esac
+  shift
+done
 
-KB_DIR=$(cat $SCRIPT_DIR/kb_locations.lst | fzf --preview-window=$WINDOWLOC "--preview=bat --color=always {}/README.md")
-if [ $(echo -n "$KB_DIR" | wc -c) == 0 ]; then 
-  exit 1
+# prompt for kb dir if not provided
+if [ -z "$KB_DIR" ]; then
+  # select kb
+  KB_DIR=$(cat $SCRIPT_DIR/kb_locations.lst | fzf --preview-window=$WINDOWLOC "--preview=bat --color=always {}/README.md")
+  if [ $(echo -n "$KB_DIR" | wc -c) == 0 ]; then 
+    exit 1
+  fi
 fi
 
 getbyname () {
   read line file
-  if [ $paging == "no" ]; then
+  if [ $PAGING == "no" ]; then
     bat --color=always --paging=never --style=plain $file
   else
     bat --color=always --paging=always --style=plain $file
