@@ -154,3 +154,9 @@ nmap <Space>< ebi<<Esc>ea><Esc>
 " spacing lines
 nmap <Space><Space>j o<Esc>
 nmap <Space><Space>k O<Esc>
+
+" trim last char
+nmap <Space><Space>x mz$x`z
+"
+" quit all
+nmap <C-q> :qa!
