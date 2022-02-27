@@ -15,7 +15,6 @@
   - wfuzz parameter names
   - fix up format
   - change it to be my commands
-- GTFObins
 - payloadsallthethings
 - speed up tmux pwn menu - fzf?
 - get mimikatz and win enum scripts builds ready to go
@@ -23,6 +22,7 @@
 - pregenerate lxc priv esc image in kb?
 
 ## issues fixed
+- GTFObins
 - fix `kb_locations.lst`
 - add `set -o vi` to revshell?
 - fuzzy search exploitdb bash alias
