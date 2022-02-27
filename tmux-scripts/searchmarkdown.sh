@@ -6,14 +6,18 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 # parse args
 PAGING="no"
 VERBOSE=0
+OPTIONAL_MD_SEARCH=""
 while [[ $# -gt 0 ]]; do
   case $1 in
-    -q|--query)
+    -q|--query) # grep query to find lines
       shift # pop arg
       QUERY="$1"
       ;;
-    -p|--paging)
+    -p|--paging) # use paging in output
       PAGING=1
+      ;;
+    -m|--markdown-only) # only show markdown files
+      OPTIONAL_MD_SEARCH="grep '\\.md:' | "
       ;;
     -v|--verbose)
       VERBOSE=1
@@ -31,15 +35,17 @@ while [[ $# -gt 0 ]]; do
   shift
 done
 
+if [ $VERBOSE -ne 0 ]; then
+  echo "search path: $KB_DIR"
+  echo "query:       $QUERY"
+  echo "paging:      $PAGING"
+  [ -z "$OPTIONAL_MD_SEARCH" ] && echo "Searching all files" || \
+    echo "Searching only markdown files"
+fi
+
 # exit if parameter is missing
 test -z "$KB_DIR" && echo "Missing search path" && exit 1
 test -z "$QUERY" && echo "Missing query" && exit 1
-
-if [ $VERBOSE -ne 0 ]; then
-  echo "KB Dir: $KB_DIR"
-  echo "Query:  $QUERY"
-  echo "Paging: $PAGING"
-fi
 
 # determine from tty size if we should preview vertically or horizontally
 rows=$(stty size | awk '{print $1}')
@@ -60,8 +66,7 @@ getbyname () {
 }
 
 grep -n -R "$QUERY" "$KB_DIR" 2>/dev/null | \
-  grep '\.md:' | \
-  grep -v '\.git' | \
+  $OPTIONAL_MD_SEARCH grep -v '\.git' | \
   grep -v '#!' | \
   sed 's/:#\+/:/g' | \
   fzf --preview-window=$WINDOWLOC --delimiter ':' --nth=1,2 --with-nth=1,3 --preview="echo {} | sed 's/\(.*\):\([0-9]\+\):.*/\2: \1/g' | xargs -t bat --color=always -r" | \
