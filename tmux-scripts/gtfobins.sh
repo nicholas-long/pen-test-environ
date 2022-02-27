@@ -46,6 +46,7 @@ fi
 
 getbyname () {
   read file
+  [ -z $file ] && exit 1
   if [ $PAGING == "no" ]; then
     bat --color=always --paging=never --style=plain $KB_DIR/$file.md
   else
