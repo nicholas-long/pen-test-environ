@@ -151,6 +151,7 @@ alias common='bat --style=plain --paging=never ~/kb/hacking/common-commands.md'
 alias ttl='~/tmux-scripts/markdown-vivid.sh ~/kb/hacking/to-try-list.md'
 alias a='sudo apt install -y $(apt list 2>/dev/null | fzf | cut -d '/' -f 1)'
 alias bc='sudo bettercap -autostart events.stream,net.recon,net.sniff,net.probe,arp.spoof,any.proxy'
+alias gtfo='~/tmux-scripts/gtfobins.sh'
 
 export PATH=$PATH:/usr/share/hashcat-utils
 
