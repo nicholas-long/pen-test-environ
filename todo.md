@@ -25,6 +25,7 @@
 - pregenerate lxc priv esc image in kb?
 
 ## issues fixed
+- fuzzy search exploitdb bash alias
 - to try list: like a todo list for exploits. maybe just a vim scratchpad? 
   - maybe fine with vim paragraph sorting
 - priv esc lists

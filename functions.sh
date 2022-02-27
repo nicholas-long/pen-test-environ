@@ -140,20 +140,30 @@ f() {
     cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
 }
 
+# productivity boosts
+# gotta go fast
+# like really fast
 alias g=lazygit
-alias q=exit
 alias v='nvim $(fzf --preview="bat --color=always {}")'
-alias http='python3 -m http.server'
 alias t='tmux a -t $(tmux ls | fzf| cut -d ":" -f 1) || tmux'
+alias a='sudo apt install -y $(apt list 2>/dev/null | fzf | cut -d '/' -f 1)'
+alias q=exit
+
+# helpful info scripts
 alias k='~/tmux-scripts/searchmarkdown.sh -q "^# " ~/kb'
 alias ht='~/tmux-scripts/searchmarkdown.sh -q "^# " ~/hacktricks'
+alias gtfo='~/tmux-scripts/gtfobins.sh'
 alias common='bat --style=plain --paging=never ~/kb/hacking/common-commands.md'
 alias ttl='~/tmux-scripts/markdown-vivid.sh ~/kb/hacking/to-try-list.md'
-alias a='sudo apt install -y $(apt list 2>/dev/null | fzf | cut -d '/' -f 1)'
+alias exploits='~/tmux-scripts/search-fzf-sploit.sh'
+
+# helpful commands
+alias http='python3 -m http.server'
 alias bc='sudo bettercap -autostart events.stream,net.recon,net.sniff,net.probe,arp.spoof,any.proxy'
-alias gtfo='~/tmux-scripts/gtfobins.sh'
 
 export PATH=$PATH:/usr/share/hashcat-utils
 
 # turn bash prompt into vi edit with Esc
 set -o vi
+
+# aliases for quick shell commands
