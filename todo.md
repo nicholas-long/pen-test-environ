@@ -13,6 +13,7 @@
 - take install steps and put into easy to run script
 - common commands
   - gobuster vhost
+  - wfuzz parameter names
   - fix up format
   - change it to be my commands
 - GTFObins
