@@ -8,7 +8,6 @@
   - figlet fonts
 
 # issues / todo / features
-- fix `kb_locations.lst`
 - get all impacket commands from to try list into kb
 - take install steps and put into easy to run script
 - common commands
@@ -24,6 +23,7 @@
 - pregenerate lxc priv esc image in kb?
 
 ## issues fixed
+- fix `kb_locations.lst`
 - add `set -o vi` to revshell?
 - fuzzy search exploitdb bash alias
 - to try list: like a todo list for exploits. maybe just a vim scratchpad? 
