@@ -8,6 +8,7 @@
   - figlet fonts
 
 # issues / todo / features
+- add `set -o vi` to revshell?
 - fix `kb_locations.lst`
 - get all impacket commands from to try list into kb
 - take install steps and put into easy to run script
