@@ -113,10 +113,19 @@ stty raw -echo; fg
 
 EOF
   stty size | awk '{print "stty rows",$1,"cols", $2}'
-  echo "export TERM=xterm-256color"
-  echo "export PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin"
-  echo "alias ll='ls -lsa'"
-  echo "set -o vi"
+
+  cat << EOF
+export TERM=xterm-256color
+export PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+alias ll='ls -lsa'
+set -o vi
+
+# install fff script to somewhere writable (ex: home directory)
+f() {
+    EDITOR=vi ~/fff "\$@"
+    cd "\$(cat "\${XDG_CACHE_HOME:=\${HOME}/.cache}/fff/.fff_d")"
+}
+EOF
 }
 
 function breakout {
