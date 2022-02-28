@@ -10,6 +10,7 @@
 # issues / todo / features
 - get all impacket commands from to try list into kb
 - take install steps and put into easy to run script
+  - use that script to build the docker
 - common commands
   - gobuster vhost
   - wfuzz parameter names
@@ -19,9 +20,9 @@
 - speed up tmux pwn menu - fzf?
 - get mimikatz and win enum scripts builds ready to go
 - fix apache start/stop in quick menu
-- pregenerate lxc priv esc image in kb?
 
 ## issues fixed
+- pregenerate lxc priv esc image in kb - use version cloned from repo on x64
 - GTFObins
 - fix `kb_locations.lst`
 - add `set -o vi` to revshell?
