@@ -20,6 +20,8 @@
 - speed up tmux pwn menu - fzf?
 - get mimikatz and win enum scripts builds ready to go
 - fix apache start/stop in quick menu
+- download stack overflow code and
+  - searchable database of scripts as pastable snippets
 
 ## issues fixed
 - pregenerate lxc priv esc image in kb - use version cloned from repo on x64
