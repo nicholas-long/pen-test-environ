@@ -9,6 +9,7 @@
 
 # issues / todo / features
 - fix kb looking up commands in md
+- toggle systemctl services on and off
 - tmux hotkeys for insert mode
 - get all impacket commands from to try list into kb
 - take install steps and put into easy to run script
