@@ -8,6 +8,8 @@
   - figlet fonts
 
 # issues / todo / features
+- fix kb looking up commands in md
+- tmux hotkeys for insert mode
 - get all impacket commands from to try list into kb
 - take install steps and put into easy to run script
   - use that script to build the docker
