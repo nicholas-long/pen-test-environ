@@ -169,3 +169,4 @@ nmap <Space><Space>r :set relativenumber<C-m>
 
 " make titles
 nmap <Space>- yypv$r-o<Esc>
+nmap <Space>= yypv$r=o<Esc>
