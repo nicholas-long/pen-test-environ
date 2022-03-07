@@ -176,6 +176,8 @@ nmap - i-<Esc>xo<Esc>100p
 nmap <Tab> :ka<Enter>:y<Enter>:0 put<Enter>:'a<Enter>
 vmap <Tab> yma:0 put<Enter>`a
 nmap <Space>d yyp
+nmap <Space>a :m0<Enter>
+vmap <Space>k yO<C-r>"<Esc>
 
 " tabulate
 nmap <Space><BS> :s/\s\+/ /<Enter>
