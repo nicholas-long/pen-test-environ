@@ -177,7 +177,12 @@ nmap <Tab> :ka<Enter>:y<Enter>:0 put<Enter>:'a<Enter>
 vmap <Tab> yma:0 put<Enter>`a
 nmap <Space>d yyp
 nmap <Space>a :m0<Enter>
+" extract highlighted text upwards
 vmap <Space>k yO<C-r>"<Esc>
+" extract rest of line
+nmap <Space>e DuO<C-r>"<Esc>
+" look up files related to this line
+nmap <Space>i 0y$:NERDTree<Enter>/<C-r>"<Enter><Enter>:NERDTreeToggle<Enter>
 
 " tabulate
 nmap <Space><BS> :s/\s\+/ /<Enter>
