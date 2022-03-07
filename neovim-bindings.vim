@@ -170,3 +170,14 @@ nmap <Space><Space>r :set relativenumber<C-m>
 " make titles
 nmap <Space>- yypv$r-o<Esc>
 nmap <Space>= yypv$r=o<Esc>
+nmap - i-<Esc>xo<Esc>100p
+
+" stack workflow
+nmap <Tab> :ka<Enter>:y<Enter>:0 put<Enter>:'a<Enter>
+vmap <Tab> yma:0 put<Enter>`a
+
+" tabulate
+nmap <Space><BS> :s/  / /<Enter>
+vmap <Space><BS> :s/  / /<Enter>
+nmap <Space><Tab> :s/ \+/\t/<Enter>/\t<Enter>
+vmap <Space><Tab> :s/ \+/\t/<Enter>/\t<Enter>
