@@ -166,3 +166,6 @@ nmap <C-m> :set norelativenumber<C-m>:
 
 " reset relative numbers when you are done doing ex stuff
 nmap <Space><Space>r :set relativenumber<C-m>
+
+" make titles
+nmap <Space>- yypv$r-o<Esc>
