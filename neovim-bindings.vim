@@ -178,7 +178,7 @@ vmap <Tab> yma:0 put<Enter>`a
 nmap <Space>d yyp
 nmap <Space>a :m0<Enter>
 " extract highlighted text upwards
-vmap <Space>k yO<C-r>"<Esc>
+vmap <Space>k mayO<C-r>"<Esc>`a
 " extract rest of line
 nmap <Space>e DuO<C-r>"<Esc>
 " extract beginning of line
@@ -195,6 +195,9 @@ nmap <Space>$ :y<Enter>:$pu<Enter>:$!bash<Enter>k-0j
 " read
 nmap <Space># :y<Enter>:$r <C-r>"
 nmap gr :y<Enter>:$r <C-r>"
+" store
+nmap gw :0,.m$<Enter>
+vmap gw :m$<Enter>
 " filter
 nmap <Space>gf :,$g/
 nmap <Space>/ :,$g/
