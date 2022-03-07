@@ -181,8 +181,28 @@ nmap <Space>a :m0<Enter>
 vmap <Space>k yO<C-r>"<Esc>
 " extract rest of line
 nmap <Space>e DuO<C-r>"<Esc>
+" extract beginning of line
+nmap ge d0O<C-r>"<Esc>
+" cut line
+nmap gk Do<C-r>"<Esc>
 " look up files related to this line
 nmap <Space>i 0y$:NERDTree<Enter>/<C-r>"<Enter><Enter>:NERDTreeToggle<Enter>
+" move visual selected lines to top
+vmap <Space>a :'<'>m0<Enter>
+
+" execute
+nmap <Space>$ :y<Enter>:$pu<Enter>:$!bash<Enter>k-0j
+" read
+nmap <Space># :y<Enter>:$r <C-r>"
+nmap gr :y<Enter>:$r <C-r>"
+" filter
+nmap <Space>gf :,$g/
+nmap <Space>/ :,$g/
+" join lines
+nmap <Space>gj :0,.j<Enter>
+nmap <Space>gJ :0,.j!<Enter>
+nmap gj :0,.j<Enter>
+nmap gJ :0,.j!<Enter>
 
 " tabulate
 nmap <Space><BS> :s/\s\+/ /<Enter>
@@ -191,6 +211,3 @@ nmap <Space><Tab> :s/ \+/\t/<Enter>/\t<Enter>
 vmap <Space><Tab> :s/ \+/\t/<Enter>/\t<Enter>
 nmap <Space><Tab><Tab> :s/ \+/\t/g<Enter>/\t<Enter>
 vmap <Space><Tab><Tab> :s/ \+/\t/g<Enter>/\t<Enter>
-
-" execute
-nmap <Space>$ :y<Enter>:$pu<Enter>:$!bash<Enter>k-0j
