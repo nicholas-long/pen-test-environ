@@ -181,3 +181,5 @@ nmap <Space><BS> :s/  / /<Enter>
 vmap <Space><BS> :s/  / /<Enter>
 nmap <Space><Tab> :s/ \+/\t/<Enter>/\t<Enter>
 vmap <Space><Tab> :s/ \+/\t/<Enter>/\t<Enter>
+nmap <Space><Tab><Tab> :s/ \+/\t/g<Enter>/\t<Enter>
+vmap <Space><Tab><Tab> :s/ \+/\t/g<Enter>/\t<Enter>
