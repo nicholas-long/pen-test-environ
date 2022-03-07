@@ -175,6 +175,7 @@ nmap - i-<Esc>xo<Esc>100p
 " stack workflow
 nmap <Tab> :ka<Enter>:y<Enter>:0 put<Enter>:'a<Enter>
 vmap <Tab> yma:0 put<Enter>`a
+nmap <Space>d yyp
 
 " tabulate
 nmap <Space><BS> :s/\s\+/ /<Enter>
@@ -183,3 +184,6 @@ nmap <Space><Tab> :s/ \+/\t/<Enter>/\t<Enter>
 vmap <Space><Tab> :s/ \+/\t/<Enter>/\t<Enter>
 nmap <Space><Tab><Tab> :s/ \+/\t/g<Enter>/\t<Enter>
 vmap <Space><Tab><Tab> :s/ \+/\t/g<Enter>/\t<Enter>
+
+" execute
+nmap <Space>$ :y<Enter>:$pu<Enter>:$!bash<Enter>k-0j
