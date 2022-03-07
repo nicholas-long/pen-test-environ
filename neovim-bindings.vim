@@ -160,3 +160,9 @@ nmap <Space><Space>x mz$x`z
 "
 " quit all
 nmap <C-q> :qa!
+
+" enter for command
+nmap <C-m> :set norelativenumber<C-m>:
+
+" reset relative numbers when you are done doing ex stuff
+nmap <Space><Space>r :set relativenumber<C-m>
