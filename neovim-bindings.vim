@@ -173,10 +173,14 @@ nmap <Space>= yypv$r=o<Esc>
 nmap - i-<Esc>xo<Esc>100p
 
 " stack workflow
+"----------------------------------------------------------------------------------------------------
 nmap <Tab> :ka<Enter>:y<Enter>:0 put<Enter>:'a<Enter>
 vmap <Tab> yma:0 put<Enter>`a
 nmap <Space>d yyp
+" move current line to top
 nmap <Space>a :m0<Enter>
+" move visual selected lines to top
+vmap <Space>a :'<'>m0<Enter>
 " extract highlighted text upwards
 vmap <Space>k mayO<C-r>"<Esc>`a
 " extract rest of line
@@ -185,10 +189,12 @@ nmap <Space>e DuO<C-r>"<Esc>
 nmap ge d0O<C-r>"<Esc>
 " cut line
 nmap gk Do<C-r>"<Esc>
+" split on commas
+nmap g, :s/,/,\r/g<Enter>
+nmap <Space><Space><Space> O<Esc>
+
 " look up files related to this line
 nmap <Space>i 0y$:NERDTree<Enter>/<C-r>"<Enter><Enter>:NERDTreeToggle<Enter>
-" move visual selected lines to top
-vmap <Space>a :'<'>m0<Enter>
 
 " execute
 nmap <Space>$ :y<Enter>:$pu<Enter>:$!bash<Enter>k-0j
@@ -196,8 +202,8 @@ nmap <Space>$ :y<Enter>:$pu<Enter>:$!bash<Enter>k-0j
 nmap <Space># :y<Enter>:$r <C-r>"
 nmap gr :y<Enter>:$r <C-r>"
 " store
-nmap gw :0,.m$<Enter>
-vmap gw :m$<Enter>
+nmap gw :0,.m$<Enter>gg
+vmap gw :m$<Enter>gg
 " filter
 nmap <Space>gf :,$g/
 nmap <Space>/ :,$g/
@@ -206,6 +212,8 @@ nmap <Space>gj :0,.j<Enter>
 nmap <Space>gJ :0,.j!<Enter>
 nmap gj :0,.j<Enter>
 nmap gJ :0,.j!<Enter>
+
+"----------------------------------------------------------------------------------------------------
 
 " tabulate
 nmap <Space><BS> :s/\s\+/ /<Enter>
