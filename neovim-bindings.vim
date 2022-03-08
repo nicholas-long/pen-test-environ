@@ -162,7 +162,7 @@ nmap <Space><Space>x mz$x`z
 nmap <C-q> :qa!
 
 " enter for command
-nmap <C-m> :set norelativenumber<C-m>:
+nmap <Space><C-m> :set norelativenumber<C-m>:
 
 " reset relative numbers when you are done doing ex stuff
 nmap <Space><Space>r :set relativenumber<C-m>
@@ -176,6 +176,10 @@ nmap - i-<Esc>xo<Esc>100p
 " stack workflow
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+nmap gq :.!jq<Enter>
+vmap gq '<,'>!jq<Enter>
+nmap gx :s/\([^\\]\)[":',]\+/\1/g<Enter>
+
 " stack operations
 " tab to push line
 nmap <Tab> :ka<Enter>:y<Enter>:0 put<Enter>:'a<Enter>
@@ -183,6 +187,8 @@ nmap <Tab> :ka<Enter>:y<Enter>:0 put<Enter>:'a<Enter>
 vmap <Tab> yma:0 put<Enter>`a
 " dup
 nmap <Space>d yyp
+" insert at top
+nmap gi :0<Enter>O
 
 " data section (appended to end of file)
 " quick execute line as bash cmd and append output text
@@ -196,9 +202,9 @@ vmap gw :m$<Enter>gg
 
 " move ops
 " move current line to top
-nmap <Space>a :m0<Enter>
+nmap gu :m0<Enter>
 " move visual selected lines to top
-vmap <Space>a :'<'>m0<Enter>
+vmap gu :'<'>m0<Enter>
 
 " extract data
 " extract highlighted text upwards
@@ -215,7 +221,7 @@ nmap <Space>/ :,$g/
 " cut line
 nmap gk Do<C-r>"<Esc>
 " split on commas
-nmap g, :s/,/,\r/g<Enter>
+nmap g, :s/,/\r/g<Enter>
 " insert a space up
 nmap <Space><Space><Space> O<Esc>
 " join lines
