@@ -151,6 +151,8 @@ f() {
     cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
 }
 
+# aliases for quick shell commands
+
 # productivity boosts
 # gotta go fast
 # like really fast
@@ -178,4 +180,5 @@ export PATH=$PATH:/usr/share/hashcat-utils
 # turn bash prompt into vi edit with Esc
 set -o vi
 
-# aliases for quick shell commands
+cat $HOME/pen-test-environ/banner
+
