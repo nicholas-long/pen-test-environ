@@ -247,9 +247,9 @@ nmap GR :y<Enter>:$r <C-r>"
 
 " move ops
 " move current line to top
-nmap GU :m0<Enter>:$<Enter>
+nmap GU :m0<Enter>
 " move visual selected lines to top
-vmap GU :'<'>m0<Enter>:$<Enter>
+vmap GU :'<'>m0<Enter>
 
 " extract data
 " extract highlighted text upwards
