@@ -188,7 +188,7 @@ nmap <Space>v :,$v/
 " strip
 nmap gs :s// /g<Left><Left><Left><Left>
 
-" grab
+" grab move
 nmap g1 :.+1m.<Enter>
 nmap g2 :.+2m.<Enter>
 nmap g3 :.+3m.<Enter>
@@ -198,6 +198,16 @@ nmap g6 :.+6m.<Enter>
 nmap g7 :.+7m.<Enter>
 nmap g8 :.+8m.<Enter>
 nmap g9 :.+9m.<Enter>
+
+nmap G1 :.-1m.<Enter>
+nmap G2 :.-2m.<Enter>
+nmap G3 :.-3m.<Enter>
+nmap G4 :.-4m.<Enter>
+nmap G5 :.-5m.<Enter>
+nmap G6 :.-6m.<Enter>
+nmap G7 :.-7m.<Enter>
+nmap G8 :.-8m.<Enter>
+nmap G9 :.-9m.<Enter>
 
 " jq prettify line
 nmap gq :.!jq<Enter>
@@ -261,6 +271,7 @@ nmap gJ :.,$j!<Enter>
 " search and open files
 " look up files containing this line
 nmap GF 0y$:NERDTree<Enter>/<C-r>"<Enter><Enter>:NERDTreeToggle<Enter>
+" TODO: base64
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tabulate data for awk
