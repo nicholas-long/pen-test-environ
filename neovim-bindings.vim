@@ -176,11 +176,54 @@ nmap - i-<Esc>xo<Esc>100p
 " stack workflow
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-nmap gq :.!jq<Enter>
-vmap gq '<,'>!jq<Enter>
-nmap gx :s/\([^\\]\)[":',]\+/\1/g<Enter>
+nmap G<Tab> :y<Enter>:$pu<Enter>
+nmap G- ?---<Enter>
+
+" delete convenience
+nmap DD dd
+nmap DW dW
+nmap DE dE
+
+vmap K k
+imap JK <Esc>
+
+" dup
+nmap GC yyp
+
+" filter
+nmap GF :,$g/
+nmap G/ :,$g/
+
+" strip
+nmap GS :s// /g<Left><Left><Left><Left>
+
+nmap GG :$<Enter>
+nmap Gg :0<Enter>
+
+nmap G1 :.-1y<Enter>:$pu<Enter>
+nmap G2 :.-2y<Enter>:$pu<Enter>
+nmap G3 :.-3y<Enter>:$pu<Enter>
+nmap G4 :.-4y<Enter>:$pu<Enter>
+nmap G5 :.-5y<Enter>:$pu<Enter>
+nmap G6 :.-6y<Enter>:$pu<Enter>
+nmap G7 :.-7y<Enter>:$pu<Enter>
+nmap G8 :.-8y<Enter>:$pu<Enter>
+nmap G9 :.-9y<Enter>:$pu<Enter>
+
+nmap U u
+nmap GO :
+nmap GD :d<Enter>:$<Enter>
+
+" jq prettify line
+nmap GQ :.!jq<Enter>
+vmap GQ '<,'>!jq<Enter>
+" get rid of json characters
+nmap GX :s/\([^\\]\)[":',]\+/\1/g<Enter>
 
 " stack operations
+" move to top
+nmap G<Space> :m0<Enter>:$<Enter>
+vmap <Space> :'<'>m0<Enter>:$<Enter>
 " tab to push line
 nmap <Tab> :ka<Enter>:y<Enter>:0 put<Enter>:'a<Enter>
 " tab to push selected in visual
@@ -188,47 +231,46 @@ vmap <Tab> yma:0 put<Enter>`a
 " dup
 nmap <Space>d yyp
 " insert at top
-nmap gi :0<Enter>O
+nmap GI :0<Enter>O
+nmap GA :$<Enter>o
 
 " data section (appended to end of file)
 " quick execute line as bash cmd and append output text
 nmap <Space>$ :y<Enter>:$pu<Enter>:$!bash<Enter>k-0j
+nmap G$ :y<Enter>:$pu<Enter>:$!bash<Enter>k-0j
 " read
 nmap <Space># :y<Enter>:$r <C-r>"
-nmap gr :y<Enter>:$r <C-r>"
+nmap GR :y<Enter>:$r <C-r>"
 " store
-nmap gw :0,.m$<Enter>gg
-vmap gw :m$<Enter>gg
+"nmap GW :0,.m$<Enter>gg
+"vmap GW :m$<Enter>gg
 
 " move ops
 " move current line to top
-nmap gu :m0<Enter>
+nmap GU :m0<Enter>:$<Enter>
 " move visual selected lines to top
-vmap gu :'<'>m0<Enter>
+vmap GU :'<'>m0<Enter>:$<Enter>
 
 " extract data
 " extract highlighted text upwards
 vmap <Space>k mayO<C-r>"<Esc>`a
 " extract rest of line
-nmap <Space>e DuO<C-r>"<Esc>
+nmap GE DuO<C-r>"<Esc>
 " extract beginning of line
-nmap ge d0O<C-r>"<Esc>
-" filter
-nmap <Space>gf :,$g/
-nmap <Space>/ :,$g/
+nmap Ge d0O<C-r>"<Esc>
 
 " line quick operations
 " cut line
-nmap gk Do<C-r>"<Esc>
+nmap GK Do<C-r>"<Esc>
 " split on commas
-nmap g, :s/,/\r/g<Enter>
+nmap G, :s/,/\r/g<Enter>
 " insert a space up
 nmap <Space><Space><Space> O<Esc>
 " join lines
 nmap <Space>gj :0,.j<Enter>
 nmap <Space>gJ :0,.j!<Enter>
-nmap gj :0,.j<Enter>
-nmap gJ :0,.j!<Enter>
+nmap GJ :.,$j<Enter>
+nmap Gj :.,$j!<Enter>
 
 " search and open files
 " look up files containing this line
