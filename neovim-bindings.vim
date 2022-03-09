@@ -1,3 +1,4 @@
+" coyote0x90
 set expandtab
 set tabstop=2
 set shiftwidth=2
@@ -144,7 +145,7 @@ nmap <Space>kb :r ~/kb/
 
 " add comma from normal mode
 nmap <Space>, Ea,<Esc>
-" surround rest of line "with quotes or parens"
+" surround rest of line with quotes or parens
 nmap <Space>` ebi`<Esc>A`<Esc>
 nmap <Space>" ebi"<Esc>A"<Esc>
 nmap <Space>' ebi'<Esc>A'<Esc>
@@ -170,111 +171,96 @@ nmap <Space><Space>r :set relativenumber<C-m>
 " make titles
 nmap <Space>- yypv$r-o<Esc>
 nmap <Space>= yypv$r=o<Esc>
-nmap - i-<Esc>xo<Esc>100p
+nmap - i-<Esc>xo<Esc>80p
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " stack workflow
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 nmap G<Tab> :y<Enter>:$pu<Enter>
 nmap G- ?---<Enter>
-
-" delete convenience
-nmap DD dd
-nmap DW dW
-nmap DE dE
-
-vmap K k
-imap JK <Esc>
-
-" dup
-nmap GC yyp
+nmap g- /---<Enter>
 
 " filter
-nmap GF :,$g/
-nmap G/ :,$g/
+nmap <Space>/ :,$g/
+nmap <Space>v :,$v/
 
 " strip
-nmap GS :s// /g<Left><Left><Left><Left>
+nmap gs :s// /g<Left><Left><Left><Left>
 
-nmap GG :$<Enter>
-nmap Gg :0<Enter>
-
-nmap G1 :.-1y<Enter>:$pu<Enter>
-nmap G2 :.-2y<Enter>:$pu<Enter>
-nmap G3 :.-3y<Enter>:$pu<Enter>
-nmap G4 :.-4y<Enter>:$pu<Enter>
-nmap G5 :.-5y<Enter>:$pu<Enter>
-nmap G6 :.-6y<Enter>:$pu<Enter>
-nmap G7 :.-7y<Enter>:$pu<Enter>
-nmap G8 :.-8y<Enter>:$pu<Enter>
-nmap G9 :.-9y<Enter>:$pu<Enter>
-
-nmap U u
-nmap GO :
-nmap GD :d<Enter>:$<Enter>
+" grab
+nmap g1 :.+1m.<Enter>
+nmap g2 :.+2m.<Enter>
+nmap g3 :.+3m.<Enter>
+nmap g4 :.+4m.<Enter>
+nmap g5 :.+5m.<Enter>
+nmap g6 :.+6m.<Enter>
+nmap g7 :.+7m.<Enter>
+nmap g8 :.+8m.<Enter>
+nmap g9 :.+9m.<Enter>
 
 " jq prettify line
-nmap GQ :.!jq<Enter>
-vmap GQ '<,'>!jq<Enter>
+nmap gq :.!jq<Enter>
+vmap gq '<,'>!jq
+
 " get rid of json characters
-nmap GX :s/\([^\\]\)[":',]\+/\1/g<Enter>
+nmap gx :s/\([^\\]\)[":',]\+/\1/g<Enter>
+
+" TODO: base64
+
+" execute line as quick bash cmd and append output text
+nmap <Space>$ :y<Enter>:$pu<Enter>:$!bash<Enter>k-0j
+vmap <Space>$ y:$pu<Enter>:$!bash<Enter>k-0j
+
+" read
+nmap <Space># :y<Enter>:$r <C-r>"
+nmap <Space>R :y<Enter>:$r <C-r>"
 
 " stack operations
-" move to top
-nmap G<Space> :m0<Enter>:$<Enter>
-vmap <Space> :'<'>m0<Enter>:$<Enter>
 " tab to push line
 nmap <Tab> :ka<Enter>:y<Enter>:0 put<Enter>:'a<Enter>
 " tab to push selected in visual
 vmap <Tab> yma:0 put<Enter>`a
-" dup
-nmap <Space>d yyp
-" insert at top
-nmap GI :0<Enter>O
-nmap GA :$<Enter>o
-
-" data section (appended to end of file)
-" quick execute line as bash cmd and append output text
-nmap <Space>$ :y<Enter>:$pu<Enter>:$!bash<Enter>k-0j
-nmap G$ :y<Enter>:$pu<Enter>:$!bash<Enter>k-0j
-" read
-nmap <Space># :y<Enter>:$r <C-r>"
-nmap GR :y<Enter>:$r <C-r>"
-" store
-"nmap GW :0,.m$<Enter>gg
-"vmap GW :m$<Enter>gg
+" space tab to push line to bottom
+nmap <Space><Tab> :ka<Enter>:y<Enter>:$ put<Enter>:'a<Enter>
+" space tab to push selected to bottom in visual
+vmap <Space><Tab> yma:$ put<Enter>`a
 
 " move ops
-" move current line to top
-nmap GU :m0<Enter>
-" move visual selected lines to top
-vmap GU :'<'>m0<Enter>
+" visual move to top and bottom
+vmap <Up> :m0<Enter>
+vmap <Down> :m$<Enter>
+" pull up move command
+nmap <Space>m :m
+vmap m :m
+
+" insert at top
+nmap <Space>I :0<Enter>O
+nmap <Space>A :$<Enter>o
 
 " extract data
-" extract highlighted text upwards
-vmap <Space>k mayO<C-r>"<Esc>`a
 " extract rest of line
-nmap GE DuO<C-r>"<Esc>
+nmap Ge Duo<C-r>"<Esc>
 " extract beginning of line
-nmap Ge d0O<C-r>"<Esc>
+nmap GE d0uo<C-r>"<Esc>
 
 " line quick operations
 " cut line
-nmap GK Do<C-r>"<Esc>
+nmap gk Do<C-r>"<Esc>
 " split on commas
-nmap G, :s/,/\r/g<Enter>
+nmap g, :s/,/\r/g<Enter>
 " insert a space up
 nmap <Space><Space><Space> O<Esc>
-" join lines
-nmap <Space>gj :0,.j<Enter>
-nmap <Space>gJ :0,.j!<Enter>
-nmap GJ :.,$j<Enter>
-nmap Gj :.,$j!<Enter>
+
+" mass join lines
+nmap <Space>Gj :0,.j<Enter>
+nmap <Space>GJ :0,.j!<Enter>
+nmap gj :.,$j<Enter>
+nmap gJ :.,$j!<Enter>
 
 " search and open files
 " look up files containing this line
-nmap <Space>i 0y$:NERDTree<Enter>/<C-r>"<Enter><Enter>:NERDTreeToggle<Enter>
+nmap GF 0y$:NERDTree<Enter>/<C-r>"<Enter><Enter>:NERDTreeToggle<Enter>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tabulate data for awk
@@ -282,7 +268,28 @@ nmap <Space>i 0y$:NERDTree<Enter>/<C-r>"<Enter><Enter>:NERDTreeToggle<Enter>
 
 nmap <Space><BS> :s/\s\+/ /<Enter>
 vmap <Space><BS> :s/\s\+/ /<Enter>
-nmap <Space><Tab> :s/ \+/\t/<Enter>/\t<Enter>
-vmap <Space><Tab> :s/ \+/\t/<Enter>/\t<Enter>
 nmap <Space><Tab><Tab> :s/ \+/\t/g<Enter>/\t<Enter>
 vmap <Space><Tab><Tab> :s/ \+/\t/g<Enter>/\t<Enter>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" garbage
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"vmap K k
+"imap JK <Esc>
+
+" delete convenience
+"nmap DD dd
+"nmap DW dW
+"nmap DE dE
+
+"" dup
+"nmap <Space>d yyp
+"nmap GD :d<Enter>:$<Enter>
+" store
+"nmap GW :0,.m$<Enter>gg
+"vmap GW :m$<Enter>gg
+" dup
+"nmap GC yyp
+
+" extract highlighted text upwards
+"???? vmap <Space>k mayO<C-r>"<Esc>`a
