@@ -8,6 +8,13 @@
   - figlet fonts
 
 # issues / todo / features
+- template directory for pen test reporting and notes project
+  - can put in kb
+  - contents
+    - users
+    - passwords
+    - files
+    - vulns
 - fix kb looking up commands in md
 - toggle systemctl services on and off
 - tmux hotkeys for insert mode
@@ -19,6 +26,9 @@
   - wfuzz parameter names
   - fix up format
   - change it to be my commands
+  - wordpress 
+    - enum 
+    - bruteforce
 - payloadsallthethings
 - speed up tmux pwn menu - fzf?
 - get mimikatz and win enum scripts builds ready to go
