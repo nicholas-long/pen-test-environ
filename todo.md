@@ -8,16 +8,7 @@
   - figlet fonts
 
 # issues / todo / features
-- template directory for pen test reporting and notes project
-  - can put in kb
-  - contents
-    - users
-    - passwords
-    - files
-    - vulns
 - fix kb looking up commands in md
-- toggle systemctl services on and off
-- tmux hotkeys for insert mode
 - get all impacket commands from to try list into kb
 - take install steps and put into easy to run script
   - use that script to build the docker
@@ -30,13 +21,22 @@
     - enum 
     - bruteforce
 - payloadsallthethings
-- speed up tmux pwn menu - fzf?
 - get mimikatz and win enum scripts builds ready to go
+- toggle systemctl services on and off
+- speed up tmux pwn menu - fzf?
 - fix apache start/stop in quick menu
+- tmux hotkeys for insert mode
 - download stack overflow code and
   - searchable database of scripts as pastable snippets
 
 ## issues fixed
+- template directory for pen test reporting and notes project
+  - can put in kb
+  - contents
+    - users
+    - passwords
+    - files
+    - vulns
 - pregenerate lxc priv esc image in kb - use version cloned from repo on x64
 - GTFObins
 - fix `kb_locations.lst`
