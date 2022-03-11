@@ -8,7 +8,8 @@
   - figlet fonts
 
 # issues / todo / features
-- fix kb looking up commands in md
+- zsh fuzzy find file fzf with `**`
+- batch file to add users to windows and enable remote desktop
 - get all impacket commands from to try list into kb
 - take install steps and put into easy to run script
   - use that script to build the docker
@@ -30,6 +31,9 @@
   - searchable database of scripts as pastable snippets
 
 ## issues fixed
+- fzf cd
+- fix kb looking up commands in md
+  - don't leave named pipes laying around
 - template directory for pen test reporting and notes project
   - can put in kb
   - contents
