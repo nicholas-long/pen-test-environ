@@ -8,7 +8,6 @@
   - figlet fonts
 
 # issues / todo / features
-- nishang shell copy and edit script shortcut
 - zsh fuzzy find file fzf with `**`
 - batch file to add users to windows and enable remote desktop
 - get all impacket commands from to try list into kb
@@ -32,6 +31,7 @@
   - searchable database of scripts as pastable snippets
 
 ## issues fixed
+- nishang shell copy and edit script shortcut
 - fzf cd
 - fix kb looking up commands in md
   - don't leave named pipes laying around
