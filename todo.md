@@ -8,7 +8,6 @@
   - figlet fonts
 
 # issues / todo / features
-- init box notes
 - join lines upwards
 - zsh fuzzy find file fzf with `**`
 - batch file to add users to windows and enable remote desktop
@@ -33,6 +32,7 @@
   - searchable database of scripts as pastable snippets
 
 ## issues fixed
+- init box notes
 - nishang shell copy and edit script shortcut
 - fzf cd
 - fix kb looking up commands in md
