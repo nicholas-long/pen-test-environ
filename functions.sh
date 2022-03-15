@@ -186,6 +186,7 @@ alias t='tmux a -t $(tmux ls | fzf| cut -d ":" -f 1) || tmux'
 alias a='sudo apt install -y $(apt list 2>/dev/null | fzf | cut -d '/' -f 1)'
 alias c='cd $(find / -type d 2>/dev/null | fzf "--preview=ls -al {}")'
 alias q=exit
+alias startnotes="nvim -c ':split' -c ':e scratch.md' notes.md"
 
 # helpful info scripts
 alias k='~/tmux-scripts/searchmarkdown.sh -q "^# " ~/kb'
