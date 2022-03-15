@@ -159,6 +159,15 @@ function nishanghere {
   ex -s -c "\$s/4444/$PORT/" -c wq nishang.ps1
 }
 
+function boxnotes {
+  dirname=$1
+  if [ -z "$dirname" ]; then
+    cp -r ~/kb/hacking/notes-template/* .
+  else
+    cp -r ~/kb/hacking/notes-template $dirname
+  fi
+}
+
 # Add this to your .bashrc, .zshrc or equivalent.
 # Run 'fff' with 'f' or whatever you decide to name the function.
 f() {
