@@ -8,6 +8,8 @@
   - figlet fonts
 
 # issues / todo / features
+- init box notes
+- join lines upwards
 - zsh fuzzy find file fzf with `**`
 - batch file to add users to windows and enable remote desktop
 - get all impacket commands from to try list into kb
