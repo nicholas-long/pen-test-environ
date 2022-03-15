@@ -263,8 +263,8 @@ nmap g, :s/,/\r/g<Enter>
 nmap <Space><Space><Space> O<Esc>
 
 " mass join lines
-nmap <Space>Gj :0,.j<Enter>
-nmap <Space>GJ :0,.j!<Enter>
+nmap Gj :0,.j<Enter>
+nmap GJ :0,.j!<Enter>
 nmap gj :.,$j<Enter>
 nmap gJ :.,$j!<Enter>
 
