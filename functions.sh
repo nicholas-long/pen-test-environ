@@ -117,7 +117,7 @@ EOF
   cat << EOF
 export TERM=xterm-256color
 export PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
-alias ll='ls -lsa'
+alias ll='ls -lsa --color=auto'
 set -o vi
 
 # install fff script to somewhere writable (ex: home directory)

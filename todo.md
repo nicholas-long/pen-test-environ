@@ -8,7 +8,9 @@
   - figlet fonts
 
 # issues / todo / features
-- join lines upwards
+- git clone https://github.com/GTFOBins/GTFOBins.github.io
+- things from setup scripts install to /opt
+- create symlinks for apache quick files
 - zsh fuzzy find file fzf with `**`
 - batch file to add users to windows and enable remote desktop
 - get all impacket commands from to try list into kb
@@ -32,6 +34,8 @@
   - searchable database of scripts as pastable snippets
 
 ## issues fixed
+- get color working in rev shell
+- get find command for setuid binaries
 - init box notes
 - nishang shell copy and edit script shortcut
 - fzf cd
