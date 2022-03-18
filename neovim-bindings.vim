@@ -227,20 +227,23 @@ nmap <Space># :y<Enter>:$r <C-r>"
 nmap <Space>R :y<Enter>:$r <C-r>"
 
 " stack operations
-" tab to push line
-nmap <Tab> :ka<Enter>:y<Enter>:0 put<Enter>:'a<Enter>
-" tab to push selected in visual
-vmap <Tab> yma:0 put<Enter>`a
-" space tab to push line to bottom
-nmap <Space><Tab> :ka<Enter>:y<Enter>:$ put<Enter>:'a<Enter>
-" space tab to push selected to bottom in visual
-vmap <Space><Tab> yma:$ put<Enter>`a
+"" tab to push line
+"nmap <Tab> :ka<Enter>:y<Enter>:0 put<Enter>:'a<Enter>
+"" tab to push selected in visual
+"vmap <Tab> yma:0 put<Enter>`a
+"" space tab to push line to bottom
+"nmap <Space><Tab> :ka<Enter>:y<Enter>:$ put<Enter>:'a<Enter>
+"" space tab to push selected to bottom in visual
+"vmap <Space><Tab> yma:$ put<Enter>`a
 
+" tab copy to next window
+nmap <Tab> yy<C-w><C-w>ggP<C-w><C-w>
+vmap <Tab> y<C-w><C-w>ggP<C-w><C-w>
 " move ops
 " visual move to top and bottom
 vmap <Up> :m0<Enter>
 vmap <Down> :m$<Enter>
-vmap <Left> :m'{-1<Enter>
+vmap <Left> :m'{<Enter>
 vmap <Right> :m'}-1<Enter>
 " pull up move command
 nmap <Space>m :m

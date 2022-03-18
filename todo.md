@@ -8,12 +8,11 @@
   - figlet fonts
 
 # issues / todo / features
-- to try lists - split into files
-- privesc to try lists - split into files
 - git clone https://github.com/GTFOBins/GTFOBins.github.io
-- things from setup scripts install to /opt
 - create symlinks for apache quick files
 - zsh fuzzy find file fzf with `**`
+- to try lists - split into files
+- privesc to try lists - split into files
 - batch file to add users to windows and enable remote desktop
 - get all impacket commands from to try list into kb
 - take install steps and put into easy to run script
@@ -36,6 +35,8 @@
   - searchable database of scripts as pastable snippets
 
 ## issues fixed
+- things from setup scripts install to /opt
+  - included script
 - hotkey to move something to the bottom or top of paragraph instead of just file
 - john command
 - get color working in rev shell
