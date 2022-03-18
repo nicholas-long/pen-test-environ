@@ -227,8 +227,8 @@ nmap <Space># :y<Enter>:$r <C-r>"
 nmap <Space>R :y<Enter>:$r <C-r>"
 
 " stack operations
-"" tab to push line
-"nmap <Tab> :ka<Enter>:y<Enter>:0 put<Enter>:'a<Enter>
+" space tab to push line
+nmap <Space><Tab> :ka<Enter>:y<Enter>:0 put<Enter>:'a<Enter>
 "" tab to push selected in visual
 "vmap <Tab> yma:0 put<Enter>`a
 "" space tab to push line to bottom
@@ -281,11 +281,13 @@ nmap GF 0y$:NERDTree<Enter>/<C-r>"<Enter><Enter>:NERDTreeToggle<Enter>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tabulate data for awk
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-nmap <Space><BS> :s/\s\+/ /<Enter>
-vmap <Space><BS> :s/\s\+/ /<Enter>
-nmap <Space><Tab><Tab> :s/ \+/\t/g<Enter>/\t<Enter>
-vmap <Space><Tab><Tab> :s/ \+/\t/g<Enter>/\t<Enter>
+"
+" this section is a work in progress and not strictly necessary for pentesting
+"
+"nmap <Space><BS> :s/\s\+/ /<Enter>
+"vmap <Space><BS> :s/\s\+/ /<Enter>
+"nmap <Space><Tab><Tab> :s/ \+/\t/g<Enter>/\t<Enter>
+"vmap <Space><Tab><Tab> :s/ \+/\t/g<Enter>/\t<Enter>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " garbage
