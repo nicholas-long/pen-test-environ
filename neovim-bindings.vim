@@ -240,6 +240,8 @@ vmap <Space><Tab> yma:$ put<Enter>`a
 " visual move to top and bottom
 vmap <Up> :m0<Enter>
 vmap <Down> :m$<Enter>
+vmap <Left> :m'{-1<Enter>
+vmap <Right> :m'}-1<Enter>
 " pull up move command
 nmap <Space>m :m
 vmap m :m
