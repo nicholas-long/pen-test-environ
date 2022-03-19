@@ -8,6 +8,7 @@
   - figlet fonts
 
 # issues / todo / features
+- movement keys when in tmux select mode
 - quick http server alias
 - git clone https://github.com/GTFOBins/GTFOBins.github.io
 - create symlinks for apache quick files
