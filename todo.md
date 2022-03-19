@@ -8,7 +8,6 @@
   - figlet fonts
 
 # issues / todo / features
-- movement keys when in tmux select mode
 - quick http server alias
 - git clone https://github.com/GTFOBins/GTFOBins.github.io
 - create symlinks for apache quick files
@@ -37,6 +36,7 @@
   - searchable database of scripts as pastable snippets
 
 ## issues fixed
+- movement keys when in tmux select mode
 - things from setup scripts install to /opt
   - included script
 - hotkey to move something to the bottom or top of paragraph instead of just file
