@@ -8,7 +8,6 @@
   - figlet fonts
 
 # issues / todo / features
-- quick http server alias
 - git clone https://github.com/GTFOBins/GTFOBins.github.io
 - create symlinks for apache quick files
 - zsh fuzzy find file fzf with `**`
@@ -36,6 +35,7 @@
   - searchable database of scripts as pastable snippets
 
 ## issues fixed
+- quick http server alias
 - movement keys when in tmux select mode
 - things from setup scripts install to /opt
   - included script
