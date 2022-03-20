@@ -206,5 +206,6 @@ export PATH=$PATH:/usr/share/hashcat-utils
 # turn bash prompt into vi edit with Esc
 set -o vi
 
+neofetch
 cat $HOME/pen-test-environ/banner
 

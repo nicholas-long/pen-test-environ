@@ -31,3 +31,4 @@ sudo gem install seccomp-tools
 #install gef for gdb
 bash -c "$(curl -fsSL http://gef.blah.cat/sh)"
 sudo pip3 install pwntools
+sudo apt install -y neofetch
