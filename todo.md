@@ -9,6 +9,7 @@
 
 # issues / todo / features
 - NEED CTRL-L in VIM for line autocompletion
+- startnotes should import the everything list
 - git clone https://github.com/GTFOBins/GTFOBins.github.io
 - create symlinks for apache quick files
 - zsh fuzzy find file fzf with `**`

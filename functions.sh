@@ -140,8 +140,8 @@ function build_it_in_ubuntu_docker {
     export tag=$(~/kb/docker/get-tags.sh ubuntu | fzf --prompt="select tag")
   fi
   ~/kb/docker/templates/ubuntu-dockerfile-template.sh $tag > Dockerfile 
-  docker build . -t test
-  docker run -it -v "$(pwd):$(pwd)" -w "$(pwd)" test
+  sudo docker build . -t test
+  sudo docker run -it -v "$(pwd):$(pwd)" -w "$(pwd)" test
 }
 
 function nishanghere {
