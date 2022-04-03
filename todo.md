@@ -9,12 +9,9 @@
 
 # issues / todo / features
 - NEED CTRL-L in VIM for line autocompletion
-- startnotes should import the everything list
 - git clone https://github.com/GTFOBins/GTFOBins.github.io
 - create symlinks for apache quick files
 - zsh fuzzy find file fzf with `**`
-- to try lists - split into files
-- privesc to try lists - split into files
 - batch file to add users to windows and enable remote desktop
 - get all impacket commands from to try list into kb
 - take install steps and put into easy to run script
@@ -35,8 +32,12 @@
 - tmux hotkeys for insert mode
 - download stack overflow code and
   - searchable database of scripts as pastable snippets
+- to try lists - split into files
+- privesc to try lists - split into files
 
 ## issues fixed
+- startnotes should import the everything list
+  - fixing markdown search instead 
 - quick http server alias
 - movement keys when in tmux select mode
 - things from setup scripts install to /opt
