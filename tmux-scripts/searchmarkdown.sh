@@ -63,7 +63,9 @@ getbyname () {
   else
     bat --color=always --paging=always --style=plain $file
   fi
+  echo ""
   echo "--------------------------------------------------------------------------------"
+  echo ""
   awk -v "line=$line" -f $SCRIPT_DIR/print-kb.awk "$file" | bat --language=md --paging=never --style=plain --color=always
 }
 
