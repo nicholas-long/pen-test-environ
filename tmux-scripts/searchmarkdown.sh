@@ -58,6 +58,7 @@ fi
 
 getbyname () {
   read line file
+  echo $file
   if [ $PAGING == "no" ]; then
     bat --color=always --paging=never --style=plain $file
   else
@@ -65,6 +66,7 @@ getbyname () {
   fi
   echo ""
   echo "--------------------------------------------------------------------------------"
+  echo $file line $line
   echo ""
   awk -v "line=$line" -f $SCRIPT_DIR/print-kb.awk "$file" | bat --language=md --paging=never --style=plain --color=always
 }
