@@ -8,6 +8,7 @@
   - figlet fonts
 
 # issues / todo / features
+- tmux save pane history hotkey
 - kb: run program as user with powershell
 - NEED CTRL-L in VIM for line autocompletion
 - git clone https://github.com/GTFOBins/GTFOBins.github.io
