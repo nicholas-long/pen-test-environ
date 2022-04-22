@@ -172,6 +172,12 @@ function boxnotes {
   fi
 }
 
+function key {
+  filename=$1
+  ~/kb/bash-scripting/ssh-keygen-generate-file.exp $filename
+  cat $filename.pub
+}
+
 # Add this to your .bashrc, .zshrc or equivalent.
 # Run 'fff' with 'f' or whatever you decide to name the function.
 f() {
