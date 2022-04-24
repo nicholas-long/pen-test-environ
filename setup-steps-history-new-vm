@@ -1,0 +1,68 @@
+git clone https://github.com/nicholas-long/pen-test-environ
+cd pen-test-environ
+ls
+cat things-to-set-up.md
+cat install.sh
+cat setup-tools.sh
+ls
+which tmux
+./setup-tools.sh
+sudo apt update
+sudo apt upgrade
+sudo apt --fix-missing update
+sudo apt upgrade
+sudo apt install libwacom-common
+sudo apt upgrade
+cat stuff-that-docker-needs.sh
+./stuff-that-docker-needs.sh
+sudo ./stuff-that-docker-needs.sh
+cat setup-tools.sh
+./setup-tools.sh
+cat install.sh
+./symlinks.sh
+mkdir -p /home/kali/.config/nvim
+./symlinks.sh
+sudo apt install neovim
+cd ..
+cd pen-test-environ
+cd pen-test-environ
+cat install.sh
+nvim install.sh
+cat Dockerfile
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+cd ~
+git clone https://github.com/nicholas-long/kb
+cd pen-test-environ
+cat Dockerfile
+cat things-to-set-up.md
+cat install.sh
+sudo apt install fonts-powerline\n
+cat install-themes.sh
+./install-themes.sh
+cat .zshrc
+nvim .zshrc
+sudo apt install fzf
+cd tmux-scripts
+find . -name fff
+cd pen-test-environ
+cat Dockerfile
+cat install-themes.sh
+nvim ~/.zshrc
+cat install.sh
+cd tmux-scripts
+cd ~/tmux-scripts && git clone https://github.com/dylanaraps/fff 2>/dev/null && git clone https://github.com/nicholas-long/github-exploit-code-repository-index 2>/dev/null
+sudo cp fff /usr/bin/
+sudo dpkg -i bat_0.20.0_amd64.deb
+gunzip lazygit_0.32.2_Linux_x86_64.tar.gz
+tar -xvf lazygit_0.32.2_Linux_x86_64.tar
+sudo cp lazygit /usr/bin/
+bat stuff-that-docker-needs.sh
+bat things-to-set-up.md
+cd ~/tmux-scripts && git clone https://github.com/dylanaraps/fff 2>/dev/null && git clone https://github.com/nicholas-long/github-exploit-code-repository-index 2>/dev/null
+sudo apt install fonts-powerline
+nvim ~/tmux-scripts/kb_locations.lst
+cat things-to-set-up.md
+cat things-to-set-up.md
+crontab -e
+git clone https://github.com/nicholas-long/tmux-pwn-menu
+pip3 install -r requirements.txt
