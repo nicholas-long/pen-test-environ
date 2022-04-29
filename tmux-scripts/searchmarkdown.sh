@@ -68,14 +68,14 @@ getbyname () {
   echo "--------------------------------------------------------------------------------"
   echo $file line $line
   echo ""
-  awk -v "line=$line" -f $SCRIPT_DIR/print-kb.awk "$file" | bat --language=md --paging=never --style=plain --color=always
+  awk -v "line=$line" -f ~/kb/awk-scripting/print-markdown-content-nested-in-heading.awk "$file" | bat --language=md --paging=never --style=plain --color=always
 }
 
-grep -n -R "$QUERY" "$KB_DIR" 2>/dev/null | \
+#grep -n -R "$QUERY" "$KB_DIR" 2>/dev/null | \
+find "$KB_DIR" -type f -name '*.md' 2>/dev/null | \
+  xargs awk -f ~/kb/awk-scripting/get-headings.awk | \
   sed "s.$KB_DIR/..g" | \
-  $OPTIONAL_MD_SEARCH grep -v '\.git' | \
-  grep -v '#!' | \
-  sed 's/:#\+/:/g' | \
-  fzf --preview-window=$WINDOWLOC --delimiter ':' --nth=1,2 --with-nth=1,3 --preview="echo {} | awk -F: '{ print \$2 \": $KB_DIR/\" \$1 }' | xargs -t bat --color=always -r" | \
-  awk -F ':' "{print \$2, \"$KB_DIR/\" \$1}" | \
+  grep -v '\.git' | \
+  fzf --preview-window=$WINDOWLOC --delimiter $'\t' --nth=1,2 --with-nth=1,3 --preview="echo {} | awk -F $'\\t' '{ print \$2 \": $KB_DIR/\" \$1 }' | xargs -t bat --color=always -r" | \
+  awk -F $'\t' "{print \$2, \"$KB_DIR/\" \$1}" | \
   getbyname $paging
