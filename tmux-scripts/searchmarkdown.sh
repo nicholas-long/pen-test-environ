@@ -60,9 +60,9 @@ getbyname () {
   read line file
   echo $file
   if [ $PAGING == "no" ]; then
-    bat --color=always --paging=never --style=plain $file
+    bat --color=always --paging=never --style=plain "$file"
   else
-    bat --color=always --paging=always --style=plain $file
+    bat --color=always --paging=always --style=plain "$file"
   fi
   echo ""
   echo "--------------------------------------------------------------------------------"
@@ -73,9 +73,10 @@ getbyname () {
 
 #grep -n -R "$QUERY" "$KB_DIR" 2>/dev/null | \
 find "$KB_DIR" -type f -name '*.md' 2>/dev/null | \
+  sed 's/.*/"&"/' | \
   xargs awk -f ~/kb/awk-scripting/get-headings.awk | \
   sed "s.$KB_DIR/..g" | \
   grep -v '\.git' | \
-  fzf --preview-window=$WINDOWLOC --delimiter $'\t' --nth=1,2 --with-nth=1,3 --preview="echo {} | awk -F $'\\t' '{ print \$2 \": $KB_DIR/\" \$1 }' | xargs -t bat --color=always -r" | \
+  fzf --preview-window=$WINDOWLOC --delimiter $'\t' --nth=1,2 --with-nth=1,3 --preview="echo {} | awk -F $'\\t' '{ print \$2 \": \\x22$KB_DIR/\" \$1 \"\\x22\" }' | xargs -t bat --color=always -r" | \
   awk -F $'\t' "{print \$2, \"$KB_DIR/\" \$1}" | \
   getbyname $paging
