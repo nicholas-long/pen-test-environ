@@ -200,6 +200,7 @@ alias startnotes="nvim -c ':split' -c ':e scratch.md' notes.md"
 
 # helpful info scripts
 alias k='~/tmux-scripts/searchmarkdown.sh -q "^# " ~/kb'
+alias payl='~/tmux-scripts/searchmarkdown.sh -q "^#\+ " ~/PayloadsAllTheThings'
 alias ht='~/tmux-scripts/searchmarkdown.sh -q "^# " ~/hacktricks'
 alias gtfo='~/tmux-scripts/gtfobins.sh'
 alias common='bat --style=plain --paging=never ~/kb/hacking/common-commands.md'
