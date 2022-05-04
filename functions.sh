@@ -121,7 +121,7 @@ EOF
   cat << EOF
 export TERM=xterm-256color
 export PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
-alias ll='ls -halt --color=auto'
+alias ll='ls -haltr --color=auto --time-style=full-iso'
 set -o vi
 
 # install fff script to somewhere writable (ex: home directory)
@@ -129,6 +129,8 @@ f() {
     EDITOR=vi ~/fff "\$@"
     cd "\$(cat "\${XDG_CACHE_HOME:=\${HOME}/.cache}/fff/.fff_d")"
 }
+alias ll='ls -haltr --color=auto'
+alias ll='ls -haltr --color=auto --time-style=full-iso'
 EOF
 }
 
@@ -197,7 +199,7 @@ alias a='sudo apt install -y $(apt list 2>/dev/null | fzf | cut -d '/' -f 1)'
 alias c='cd $(find / -type d 2>/dev/null | fzf "--preview=ls -al {}")'
 alias q=exit
 alias startnotes="nvim -c ':split' -c ':e scratch.md' notes.md"
-alias ll='ls -halt --color=auto'
+alias ll='ls -haltr --color=auto --time-style=full-iso'
 
 # helpful info scripts
 alias k='~/tmux-scripts/searchmarkdown.sh -q "^# " ~/kb'
