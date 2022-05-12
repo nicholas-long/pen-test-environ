@@ -221,5 +221,9 @@ export PATH=$PATH:/usr/share/hashcat-utils
 set -o vi
 
 neofetch
-$HOME/kb/awk-scripting/center.awk $HOME/pen-test-environ/banner
-
+which lolcat 2>/dev/null >/dev/null
+if [[ $? == 0 ]]; then
+  $HOME/kb/awk-scripting/center.awk $HOME/pen-test-environ/banner | lolcat
+else
+  $HOME/kb/awk-scripting/center.awk $HOME/pen-test-environ/banner
+fi
