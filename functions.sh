@@ -221,5 +221,5 @@ export PATH=$PATH:/usr/share/hashcat-utils
 set -o vi
 
 neofetch
-cat $HOME/pen-test-environ/banner
+$HOME/kb/awk-scripting/center.awk $HOME/pen-test-environ/banner
 
