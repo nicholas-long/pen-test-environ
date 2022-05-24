@@ -58,15 +58,16 @@ fi
 
 getbyname () {
   read line file
-  echo $file
-  if [ $PAGING == "no" ]; then
-    bat --color=always --paging=never --style=plain "$file"
-  else
-    bat --color=always --paging=always --style=plain "$file"
-  fi
-  echo ""
+  #echo $file
+  #if [ $PAGING == "no" ]; then
+  #  bat --color=always --paging=never --style=plain "$file"
+  #else
+  #  bat --color=always --paging=always --style=plain "$file"
+  #fi
+  #echo ""
   echo "--------------------------------------------------------------------------------"
   echo $file line $line
+  echo "--------------------------------------------------------------------------------"
   echo ""
   awk -v "line=$line" -f ~/kb/awk-scripting/print-markdown-content-nested-in-heading.awk "$file" | bat --language=md --paging=never --style=plain --color=always
 }
