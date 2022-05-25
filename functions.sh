@@ -220,7 +220,7 @@ export PATH=$PATH:/usr/share/hashcat-utils
 # turn bash prompt into vi edit with Esc
 set -o vi
 
-neofetch
+#neofetch
 which lolcat 2>/dev/null >/dev/null
 if [[ $? == 0 ]]; then
   $HOME/kb/awk-scripting/center.awk $HOME/pen-test-environ/banner | lolcat
