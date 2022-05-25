@@ -177,8 +177,8 @@ nmap - i-<Esc>xo<Esc>80p
 " stack workflow
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-nmap G<Tab> :y<Enter>:$pu<Enter>
-nmap G- ?---<Enter>
+"nmap G<Tab> :y<Enter>:$pu<Enter>
+"nmap G- ?---<Enter>
 nmap g- /---<Enter>
 
 " filter
@@ -187,27 +187,28 @@ nmap <Space>v :,$v/
 
 " strip
 nmap gs :s// /g<Left><Left><Left><Left>
+nmap gS :s///g<Left><Left><Left>
 
 " grab move
-nmap g1 :.+1m.<Enter>
-nmap g2 :.+2m.<Enter>
-nmap g3 :.+3m.<Enter>
-nmap g4 :.+4m.<Enter>
-nmap g5 :.+5m.<Enter>
-nmap g6 :.+6m.<Enter>
-nmap g7 :.+7m.<Enter>
-nmap g8 :.+8m.<Enter>
-nmap g9 :.+9m.<Enter>
+"nmap g1 :.+1m.<Enter>
+"nmap g2 :.+2m.<Enter>
+"nmap g3 :.+3m.<Enter>
+"nmap g4 :.+4m.<Enter>
+"nmap g5 :.+5m.<Enter>
+"nmap g6 :.+6m.<Enter>
+"nmap g7 :.+7m.<Enter>
+"nmap g8 :.+8m.<Enter>
+"nmap g9 :.+9m.<Enter>
 
-nmap G1 :.-1m.<Enter>
-nmap G2 :.-2m.<Enter>
-nmap G3 :.-3m.<Enter>
-nmap G4 :.-4m.<Enter>
-nmap G5 :.-5m.<Enter>
-nmap G6 :.-6m.<Enter>
-nmap G7 :.-7m.<Enter>
-nmap G8 :.-8m.<Enter>
-nmap G9 :.-9m.<Enter>
+"nmap G1 :.-1m.<Enter>
+"nmap G2 :.-2m.<Enter>
+"nmap G3 :.-3m.<Enter>
+"nmap G4 :.-4m.<Enter>
+"nmap G5 :.-5m.<Enter>
+"nmap G6 :.-6m.<Enter>
+"nmap G7 :.-7m.<Enter>
+"nmap G8 :.-8m.<Enter>
+"nmap G9 :.-9m.<Enter>
 
 " jq prettify line
 nmap gq :.!jq<Enter>
@@ -255,9 +256,9 @@ nmap <Space>A :$<Enter>o
 
 " extract data
 " extract rest of line
-nmap Ge Duo<C-r>"<Esc>
+"nmap Ge Duo<C-r>"<Esc>
 " extract beginning of line
-nmap GE d0uo<C-r>"<Esc>
+"nmap GE d0uo<C-r>"<Esc>
 
 " line quick operations
 " cut line
@@ -268,14 +269,14 @@ nmap g, :s/,/\r/g<Enter>
 nmap <Space><Space><Space> O<Esc>
 
 " mass join lines
-nmap Gj :0,.j<Enter>
-nmap GJ :0,.j!<Enter>
-nmap gj :.,$j<Enter>
-nmap gJ :.,$j!<Enter>
+"nmap Gj :0,.j<Enter>
+"nmap GJ :0,.j!<Enter>
+"nmap gj :.,$j<Enter>
+"nmap gJ :.,$j!<Enter>
 
 " search and open files
 " look up files containing this line
-nmap GF 0y$:NERDTree<Enter>/<C-r>"<Enter><Enter>:NERDTreeToggle<Enter>
+"nmap GF 0y$:NERDTree<Enter>/<C-r>"<Enter><Enter>:NERDTreeToggle<Enter>
 " TODO: base64
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
