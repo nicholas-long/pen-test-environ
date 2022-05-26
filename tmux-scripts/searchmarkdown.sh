@@ -51,10 +51,10 @@ test -z "$QUERY" && echo "Missing query" && exit 1
 rows=$(stty size | awk '{print $1}')
 cols=$(stty size | awk '{print $2}')
 export WINDOWLOC=up
-halfcols=$(( $cols / 2 ))
-if (($rows < $halfcols)); then
-  export WINDOWLOC=right
-fi
+#halfcols=$(( $cols / 2 ))
+#if (($rows < $halfcols)); then
+#  export WINDOWLOC=right
+#fi
 
 getbyname () {
   read line file
@@ -78,6 +78,6 @@ find "$KB_DIR" -type f -name '*.md' 2>/dev/null | \
   xargs awk -f ~/kb/awk-scripting/get-headings.awk | \
   sed "s.$KB_DIR/..g" | \
   grep -v '\.git' | \
-  fzf --preview-window=$WINDOWLOC --delimiter $'\t' --nth=1,2 --with-nth=1,3 --preview="echo {} | awk -F $'\\t' '{ print \$2 \": \\x22$KB_DIR/\" \$1 \"\\x22\" }' | xargs -t bat --color=always -r" | \
+  fzf --preview-window=$WINDOWLOC --prompt 'md search > ' --delimiter $'\t' --nth=1,2 --with-nth=1,3 --preview="echo {} | awk -F $'\\t' '{ print \$2 \": \\x22$KB_DIR/\" \$1 \"\\x22\" }' | xargs -t bat --color=always -r" | \
   awk -F $'\t' "{print \$2, \"$KB_DIR/\" \$1}" | \
   getbyname $paging
