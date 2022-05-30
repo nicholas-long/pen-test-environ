@@ -227,3 +227,6 @@ if [[ $? == 0 ]]; then
 else
   $HOME/kb/awk-scripting/center.awk $HOME/pen-test-environ/banner
 fi
+
+# configure sudoedit
+export EDITOR=nvim
