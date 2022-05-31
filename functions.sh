@@ -244,7 +244,7 @@ bindkey '\e[B' history-search-forward
 # custom agnoster prompt
 function ip_prompt {
   prompt_segment white 'black' $(getip_silent)
-  prompt_segment yellow 'black' "$IP"
+  [ -z "$IP" ] || prompt_segment yellow 'black' "$IP"
 }
 ## add to .zshrc:
 ## export AGNOSTER_PROMPT_SEGMENTS=(ip_prompt prompt_status prompt_virtualenv prompt_dir prompt_git prompt_end)
