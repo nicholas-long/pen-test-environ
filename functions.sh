@@ -18,6 +18,11 @@ function prefer_order {
   rm $tf
 }
 
+function getip_silent {
+  iface=$(ip a s | awk -f ~/kb/awk-scripting/get-interface.awk)
+  ip a s $iface | awk '$1 == "inet" { gsub(/\/.*/,"",$2);print $2 }'
+}
+
 # TODO: try to repace ugly things with is_empty
 function getmyip {
   iface=$1
@@ -235,3 +240,12 @@ export EDITOR=nvim
 # enable arrow key based history search completion
 bindkey '\e[A' history-search-backward
 bindkey '\e[B' history-search-forward
+
+# custom agnoster prompt
+function ip_prompt {
+  prompt_segment white 'black' $(getip_silent)
+  prompt_segment yellow 'black' "$IP"
+}
+## add to .zshrc:
+## export AGNOSTER_PROMPT_SEGMENTS=(ip_prompt prompt_status prompt_virtualenv prompt_dir prompt_git prompt_end)
+export LHOST=$(getip_silent)
