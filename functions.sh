@@ -231,3 +231,7 @@ fi
 
 # configure sudoedit
 export EDITOR=nvim
+
+# enable arrow key based history search completion
+bindkey '\e[A' history-search-backward
+bindkey '\e[B' history-search-forward
