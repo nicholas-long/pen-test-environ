@@ -241,11 +241,11 @@ export EDITOR=nvim
 bindkey '\e[A' history-search-backward
 bindkey '\e[B' history-search-forward
 
+export LHOST=$(getip_silent)
 # custom agnoster prompt
 function ip_prompt {
-  prompt_segment white 'black' $(getip_silent)
+  [ -z "$LHOST" ] || prompt_segment white 'black' $(getip_silent)
   [ -z "$IP" ] || prompt_segment yellow 'black' "$IP"
 }
 ## add to .zshrc:
 ## export AGNOSTER_PROMPT_SEGMENTS=(ip_prompt prompt_status prompt_virtualenv prompt_dir prompt_git prompt_end)
-export LHOST=$(getip_silent)
