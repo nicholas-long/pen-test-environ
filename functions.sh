@@ -200,6 +200,7 @@ alias c='cd $(find / -type d 2>/dev/null | fzf "--preview=ls -al {}")'
 alias q=exit
 alias startnotes="nvim -c ':split' -c ':e scratch.md' notes.md"
 alias ll='ls -haltr --color=auto --time-style=full-iso'
+alias s='nvim scratch.md'
 
 # helpful info scripts
 alias k='~/tmux-scripts/searchmarkdown.sh -q "^# " ~/kb'
