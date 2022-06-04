@@ -216,6 +216,7 @@ alias common='bat --style=plain --paging=never ~/kb/hacking/common-commands.md'
 alias ttl='~/tmux-scripts/markdown-vivid.sh ~/kb/hacking/to-try-list.md'
 alias exploits='~/tmux-scripts/search-fzf-sploit.sh'
 alias ssh_perimeter='~/kb/bash-scripting/watch-failed-ssh-logins-live-check-shodan.sh'
+alias tl='~/kb/bash-scripting/search-tldr-commands-text.sh'
 
 # helpful commands
 alias http='python3 -m http.server'
