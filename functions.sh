@@ -239,8 +239,10 @@ fi
 export EDITOR=nvim
 
 # enable arrow key based history search completion
-bindkey '\e[A' history-search-backward
-bindkey '\e[B' history-search-forward
+if echo $SHELL | grep zsh >/dev/null; then
+  bindkey '\e[A' history-search-backward
+  bindkey '\e[B' history-search-forward
+fi
 
 export LHOST=$(getip_silent)
 # custom agnoster prompt
