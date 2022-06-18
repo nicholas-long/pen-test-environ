@@ -171,12 +171,8 @@ function nishanghere {
 }
 
 function boxnotes {
-  dirname=$1
-  if [ -z "$dirname" ]; then
-    cp -r ~/kb/hacking/notes-template/* .
-  else
-    cp -r ~/kb/hacking/notes-template $dirname
-  fi
+  cp -r ~/kb/hacking/notes-template/* .
+  cp ~/kb/hacking/to-try-lists/procedure.md ./scratch.md
 }
 
 function key {
