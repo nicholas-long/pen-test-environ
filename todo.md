@@ -8,6 +8,7 @@
   - figlet fonts
 
 # issues / todo / features
+- copy directly from markdown script
 - tmux save pane history hotkey
 - kb: run program as user with powershell
 - NEED CTRL-L in VIM for line autocompletion
