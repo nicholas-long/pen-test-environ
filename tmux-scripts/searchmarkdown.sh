@@ -7,11 +7,15 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 PAGING="no"
 VERBOSE=0
 OPTIONAL_MD_SEARCH=""
+tmux_copy=0
 while [[ $# -gt 0 ]]; do
   case $1 in
     -q|--query) # grep query to find lines
       shift # pop arg
       QUERY="$1"
+      ;;
+    -c|--copy) # copy output
+      tmux_copy=1
       ;;
     -p|--paging) # use paging in output
       PAGING=1
@@ -70,6 +74,10 @@ getbyname () {
   echo "--------------------------------------------------------------------------------"
   echo ""
   awk -v "line=$line" -f ~/kb/awk-scripting/print-markdown-content-nested-in-heading.awk "$file" | bat --language=md --paging=never --style=plain --color=always
+  if [ $tmux_copy -eq 1 ]
+  then
+    awk -v "line=$line" -f ~/kb/awk-scripting/print-markdown-content-nested-in-heading.awk "$file" | tmux loadb -
+  fi
 }
 
 #grep -n -R "$QUERY" "$KB_DIR" 2>/dev/null | \

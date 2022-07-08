@@ -8,9 +8,6 @@
   - figlet fonts
 
 # issues / todo / features
-- copy directly from markdown script
-  - add parameter to markdown search script for copying
-  - add shortcut that includes copy like "kc"
 - tmux save pane history hotkey
 - kb: run program as user with powershell
 - NEED CTRL-L in VIM for line autocompletion
@@ -86,3 +83,6 @@
   - add lolcat
   - add figlet
     - and fonts? need sudo
+- copy directly from markdown script
+  - add parameter to markdown search script for copying
+  - add shortcut that includes copy like "kc"

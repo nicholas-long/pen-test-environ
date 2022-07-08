@@ -205,6 +205,7 @@ alias s='nvim scratch.md'
 
 # helpful info scripts
 alias k='~/tmux-scripts/searchmarkdown.sh -q "^# " ~/kb'
+alias kc='~/tmux-scripts/searchmarkdown.sh -c -q "^# " ~/kb'
 alias payl='~/tmux-scripts/searchmarkdown.sh -q "^#\+ " ~/PayloadsAllTheThings'
 alias ht='~/tmux-scripts/searchmarkdown.sh -q "^# " ~/hacktricks'
 alias gtfo='~/tmux-scripts/gtfobins.sh'
