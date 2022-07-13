@@ -78,6 +78,21 @@ getbyname () {
   then
     awk -v "line=$line" -f ~/kb/awk-scripting/print-markdown-content-nested-in-heading.awk "$file" | tmux loadb -
   fi
+  # print markdown link to this snippet
+  export relative_file="$(realpath --relative-to=. $file)"
+  awk -v "line=$line" '
+  NR == line {
+    gsub(/^#* /,"")
+    h = $0
+    gsub(/ /,"-", h)
+    command = "tr A-Z a-z"
+    print h |& command
+    close(command, "to")
+    command |& getline h
+    f = ENVIRON["relative_file"]
+    print "[" $0 "](" f "#" h ")"
+  }
+  ' "$file"
 }
 
 #grep -n -R "$QUERY" "$KB_DIR" 2>/dev/null | \

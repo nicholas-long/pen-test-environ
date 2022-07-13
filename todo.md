@@ -38,6 +38,7 @@
 - privesc to try lists - split into files
 
 ## issues fixed
+- print valid markdown links from kb search
 - startnotes should import the everything list
   - fixing markdown search instead 
 - quick http server alias
