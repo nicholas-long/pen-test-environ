@@ -85,6 +85,7 @@ getbyname () {
     gsub(/^#* /,"")
     h = $0
     gsub(/ /,"-", h)
+    gsub(/\//,"", h)
     command = "tr A-Z a-z"
     print h |& command
     close(command, "to")
