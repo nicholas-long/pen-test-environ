@@ -96,8 +96,8 @@ nmap <Space>l <C-w>l
 nmap <Space>h <C-w>h
 
 " split terminal from normal mode
-nmap <Space>t :split<Enter> :term<Enter>i
-nmap <Space>tg :vert split<Enter> :term<Enter>i
+"nmap <Space>t :split<Enter> :term<Enter>i
+"nmap <Space>tg :vert split<Enter> :term<Enter>i
 
 " split new terminals
 tmap <C-w><Space>t <C-\><C-N>:split<Enter> :term<Enter>i
@@ -119,6 +119,7 @@ tmap <C-w>e <C-\><C-N>yy:split<Enter><C-w>j:e cmdscratch<Enter>p
 let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 
 nmap <Space>f :Files<Enter>
+nmap <Space>t :NERDTree<Enter>
 
 " paste tmux buffer
 nmap <Space>p :r! tmux saveb -<Enter>
