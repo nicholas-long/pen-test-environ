@@ -313,3 +313,10 @@ nmap <Space><Space><Space> O<Esc>
 
 " extract highlighted text upwards
 "???? vmap <Space>k mayO<C-r>"<Esc>`a
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin specific settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let HiKeywords = '~/.vim/after/vim-highlighter'
+nmap fl :Hi:load<CR>
+nmap fs :Hi:save<CR>
+nmap f= :Hi ==<CR>
