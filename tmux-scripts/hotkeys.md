@@ -7,7 +7,7 @@
 * Prefix + `ctrl y`      : copy host clipboard to tmux buffer ( xclip )
 * Prefix + `ctrl e`      : search for exploits 
 * Prefix + `ctrl z`      : fuzzy find file fzf -> tmux buffer
-* Prefix + `ctrl i`      : Revershe shell IP menu
+* Prefix + `ctrl i`      : Reverse shell IP menu
 * Prefix + `ctrl o`      : find snippets from markdown repositories 
 * Prefix + `ctrl m`      : this help message 
 * Prefix + `ctrl q`      : manage files (copy, move) with fff 
@@ -15,14 +15,24 @@
 * Prefix + `r`           : source tmux conf
 * Prefix + `ctrl v`      : fuzzy find file; edit in neovim 
 * Prefix + `ctrl x`      : fuzzy find file on whole machine; edit in neovim 
-* `ctrl h`               : movement keys 
-* `ctrl j`               : movement keys 
-* `ctrl k`               : movement keys 
-* `ctrl l`               : movement keys 
+* `ctrl h,j,k,l`         : movement keys
 
 # vim highlighter
 `f Enter` set highlight ( word, selection )
 `f Backspace` clear highlight ( word, selection )
+`:Hi ==` sync across panes
+
+# aliases
+`k` : fuzzy search snippets; `kc` : copy
+`exploits` : fuzzy search searchsploit
+`vars` : edit `~/variables.sh`
+`boxnotes` `startnotes` : init/start notes
+`tl` : fuzzy search tldr
+`ht` : fuzzy search hacktricks
+`gtfo` : fuzzy search gtfobins
+`payl` : fuzzy search `~/PayloadsAllTheThings`
+`a`: fuzzy search apt packages,install
+`c`: fuzzy cd
 
 # [M] fff hotkeys
 ```
