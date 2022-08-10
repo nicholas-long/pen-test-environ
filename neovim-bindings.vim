@@ -317,6 +317,6 @@ nmap <Space><Space><Space> O<Esc>
 " Plugin specific settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let HiKeywords = '~/.vim/after/vim-highlighter'
-nmap fl :Hi:load<CR>
-nmap fs :Hi:save<CR>
-nmap f= :Hi ==<CR>
+nmap <Space>hl :Hi:load<CR>
+nmap <Space>hs :Hi:save<CR>
+nmap <Space>h= :Hi ==<CR>

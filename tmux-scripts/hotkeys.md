@@ -20,9 +20,9 @@
 # vim highlighter
 `f Enter` set highlight ( word, selection )
 `f Backspace` clear highlight ( word, selection )
-`nmap fl :Hi:load<CR>` load highlights
-`nmap fs :Hi:save<CR>` save highlights
-`nmap f= :Hi ==<CR>` sync highlights across panes
+`nmap <Space>hl :Hi:load<CR>` load highlights
+`nmap <Space>hs :Hi:save<CR>` save highlights
+`nmap <Space>h= :Hi ==<CR>` sync highlights across panes
 
 # aliases
 `k` : fuzzy search snippets; `kc` : copy
