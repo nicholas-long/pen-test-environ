@@ -89,6 +89,8 @@ nmap <Space>g :vert split<Enter>
 "nmap <Space>v :split<Enter>
 nmap <Space>s :split<Enter>
 
+nmap X dd
+
 " move easy
 nmap <Space>j <C-w>j
 nmap <Space>k <C-w>k
