@@ -29,7 +29,8 @@ Fix these items after installing environment
   - log in to github by cloning out a private repository 
 - add the following crontab
 ```crontab
-*/5 * * * * /bin/bash -c "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus /usr/bin/notify-send -i appointment-soon -c 'im' 'stop running down rabbit holes'"
+*/15 * * * * bash -c 'cd /home/kali/kb && git pull'
+*/15 * * * * /bin/bash -c "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus /usr/bin/notify-send -i appointment-soon -c 'im' 'stop running down rabbit holes'"
 ```
 
 # New machine setup
