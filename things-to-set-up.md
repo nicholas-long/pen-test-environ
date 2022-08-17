@@ -13,7 +13,6 @@ Fix these items after installing environment
     - `cat ~/tmux-scripts/kali-stuff-to-add-to-zsh.rc >> ~/.zshrc`
   - add `source ~/variables.sh` if you want to define env vars like `$IP` in every term
 - set up `~/tmux-scripts/kb_locations.lst` if your username is not coyote 
-- add the following crontab
 - install fzf
 - install neovim
 - make dir for nvim plugins
@@ -21,6 +20,14 @@ Fix these items after installing environment
 - add to bashrc
   - functions.sh
   - variables.sh
+- git clone http://github.com/nicholas-long/kb
+- git
+  - enable credential storage ( command in kb )
+  - configure github username and email
+    - git config --global user.name "Nicholas Long"
+    - git config --global user.email "nicholas.eden.long@gmail.com"
+  - log in to github by cloning out a private repository 
+- add the following crontab
 ```crontab
 */5 * * * * /bin/bash -c "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus /usr/bin/notify-send -i appointment-soon -c 'im' 'stop running down rabbit holes'"
 ```
