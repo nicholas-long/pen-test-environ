@@ -14,6 +14,13 @@ Fix these items after installing environment
   - add `source ~/variables.sh` if you want to define env vars like `$IP` in every term
 - set up `~/tmux-scripts/kb_locations.lst` if your username is not coyote 
 - add the following crontab
+- install fzf
+- install neovim
+- make dir for nvim plugins
+- run nvim and install plugins
+- add to bashrc
+  - functions.sh
+  - variables.sh
 ```crontab
 */5 * * * * /bin/bash -c "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus /usr/bin/notify-send -i appointment-soon -c 'im' 'stop running down rabbit holes'"
 ```
