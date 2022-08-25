@@ -33,3 +33,12 @@ sudo dpkg -i bat*.deb
 
 echo "install figlet fonts"
 sudo bash -c 'mkdir -p /usr/share/figlet && cd /usr/share/figlet && git clone https://github.com/xero/figlet-fonts && mv figlet-fonts/* .'
+
+echo "install lazygit"
+mkdir unzip
+cp lazy*.tar.gz unzip/
+cd unzip/
+tar -xzvf lazy*.tar.gz
+sudo cp lazygit /usr/bin
+cd -
+rm -rf unzip/
