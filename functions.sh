@@ -243,5 +243,9 @@ function ip_prompt {
   [ -z "$LHOST" ] || prompt_segment white 'black' "$LHOST "
   [ -z "$IP" ] || prompt_segment yellow 'black' "$IP "
 }
+
+# source variables file if it is there
+[ -f $HOME/variables.sh ] && source $HOME/variables.sh
+
 ## add to .zshrc:
 ## export AGNOSTER_PROMPT_SEGMENTS=(ip_prompt prompt_status prompt_virtualenv prompt_dir prompt_git prompt_end)
