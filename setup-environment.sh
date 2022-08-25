@@ -18,6 +18,13 @@ echo set up neovim plugins
 git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 nvim -c ':PluginInstall' -c ':q' -c ':q'
 
+echo "installing fff"
+git clone https://github.com/dylanaraps/fff
+cd fff
+sudo cp fff /usr/bin/
+cd -
+rm -rf fff
+
 echo "install into bashrc"
 echo "source ~/functions.sh" >> ~/.bashrc
 
