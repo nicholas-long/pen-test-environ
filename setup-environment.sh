@@ -42,3 +42,6 @@ tar -xzvf lazy*.tar.gz
 sudo cp lazygit /usr/bin
 cd -
 rm -rf unzip/
+
+echo "get kb"
+[ -d $HOME/kb ] || cd $HOME && git clone https://github.com/nicholas-long/kb
