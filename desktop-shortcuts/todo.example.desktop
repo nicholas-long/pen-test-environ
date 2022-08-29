@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=todo
+Comment=edit todo list
+Exec=nvim /home/coyote/todo.md
+Icon=task-due
+Type=Application
+Categories=Utility;ConsoleOnly;
+Terminal=true
