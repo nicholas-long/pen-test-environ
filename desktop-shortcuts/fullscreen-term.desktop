@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=fullscreen term
+Comment=start terminal full screen
+Exec=gnome-terminal --full-screen
+Icon=utilities-terminal
+Type=Application
+Categories=Utility;ConsoleOnly;
+Terminal=false
