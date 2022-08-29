@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=update git
+Comment=update all git repos
+Exec=/home/coyote/kb/bash-scripting/update-all-git-repos.sh
+Icon=insert-object
+Type=Application
+Categories=Utility;ConsoleOnly;
+Terminal=true
