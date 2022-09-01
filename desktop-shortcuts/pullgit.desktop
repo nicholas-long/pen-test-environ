@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=pull git
+Comment=pull all git repos
+Exec=/home/coyote/kb/bash-scripting/pull-all-git-repos.sh
+Icon=object-rotate-left
+Type=Application
+Categories=Utility;ConsoleOnly;
+Terminal=true
