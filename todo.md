@@ -1,7 +1,6 @@
 # things to fix
 
 # issues / todo / features
-- tmux save pane history hotkey
 - git clone https://github.com/GTFOBins/GTFOBins.github.io
 - create symlinks for apache quick files
 - zsh fuzzy find file fzf with `**`
