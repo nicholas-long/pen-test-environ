@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "installing prerequisites"
-sudo apt install -y git fzf neovim tmux figlet
+sudo apt install -y git fzf neovim tmux figlet lolcat
 
 echo "initialize neovim config dir"
 mkdir -p $HOME/.config/nvim
