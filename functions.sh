@@ -196,7 +196,7 @@ alias q=exit
 alias startnotes="nvim -c ':split' -c ':e scratch.md' notes.md"
 alias ll='ls -haltr --color=auto --time-style=full-iso'
 alias s='nvim scratch.md'
-alias vars='nvim ~/variables.sh'
+alias vars='nvim ~/variables.sh && source ~/variables.sh'
 alias sess='tmux new -s'
 
 # helpful info scripts
