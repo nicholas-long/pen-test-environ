@@ -214,6 +214,7 @@ alias tl='~/kb/bash-scripting/search-tldr-commands-text.sh'
 # helpful commands
 alias http='python3 -m http.server'
 alias bc='sudo bettercap -autostart events.stream,net.recon,net.sniff,net.probe,arp.spoof,any.proxy'
+alias ocrurl='~/kb/bash-scripting/copy-text-from-image-url.sh'
 
 export PATH=$PATH:/usr/share/hashcat-utils
 
