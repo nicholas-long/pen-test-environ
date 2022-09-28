@@ -322,3 +322,6 @@ let HiKeywords = '~/.vim/after/vim-highlighter'
 nmap <Space>hl :Hi:load<CR>
 nmap <Space>hs :Hi:save<CR>
 nmap <Space>h= :Hi ==<CR>
+
+setlocal complete+=k
+setlocal dictionary+=~/kb/wordlists/all-words-in-kb.txt
