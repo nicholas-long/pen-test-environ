@@ -5,8 +5,6 @@
 - create symlinks for apache quick files
 - zsh fuzzy find file fzf with `**`
 - batch file to add users to windows and enable remote desktop
-- take install steps and put into easy to run script
-  - use that script to build the docker
 - payloadsallthethings
 - toggle systemctl services on and off
 - speed up tmux pwn menu - fzf?
