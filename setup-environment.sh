@@ -45,3 +45,10 @@ rm -rf unzip/
 
 echo "get kb"
 [ -d $HOME/kb ] || cd $HOME && git clone https://github.com/nicholas-long/kb
+
+# install tldr and update database for reverse search
+sudo apt install -y tldr
+tldr -u
+
+# install gtfobins for search
+[ -d ~/GTFOBins.github.io ] || git clone https://github.com/GTFOBins/GTFOBins.github.io
